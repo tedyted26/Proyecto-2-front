@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+#index_body{
+    margin: 0 auto;
+    background-color: whitesmoke;
+}
+
+.card_base{
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    background-color: #f0f1ffc0;
+}
