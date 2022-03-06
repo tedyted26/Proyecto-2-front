@@ -1,0 +1,12 @@
+.lista-integrantes{
+    background-color: rgb(33, 212, 114);
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+}
+.grid-item{
+    display: flex;
+    justify-content: center;
+}
