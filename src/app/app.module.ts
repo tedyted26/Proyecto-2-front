@@ -9,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { FooterComponent } from './footer/footer.component';
+import { WelcomeCardComponent } from './welcome-card/welcome-card.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FooterComponent } from './footer/footer.component';
     FrameCentralComponent,
     DescripcionCardComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    WelcomeCardComponent
   ],
   imports: [
     BrowserModule,
