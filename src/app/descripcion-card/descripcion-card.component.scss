@@ -1,3 +1,29 @@
 .descripcion_card{
     background-color: rgba(108, 208, 255, 1);
+
+    #div_central{
+        position: relative;
+        height: 98%;
+        width: 98%;
+        left: 1%;
+        top: 1%;
+        background-color: green;
+        
+        .div_img{
+            position: relative;
+            width: 50%;
+            height: 100%;
+            background-color: antiquewhite;
+            img{
+                position: absolute;
+                max-width: 100%;
+                max-height: 100%;
+                width: 100%;
+                height: auto;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);   
+            }
+        }     
+    } 
 }

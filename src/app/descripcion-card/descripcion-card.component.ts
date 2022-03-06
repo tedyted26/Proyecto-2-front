@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-descripcion-card',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./descripcion-card.component.scss']
 })
 export class DescripcionCardComponent implements OnInit {
-
+  @Input("imagen") 
+  url_img: String = "";
   constructor() { }
 
   ngOnInit(): void {
