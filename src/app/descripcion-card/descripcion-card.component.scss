@@ -8,12 +8,13 @@
         left: 1%;
         top: 1%;
         background-color: green;
-        
+        //overflow: hidden;
         .div_img{
-            position: relative;
+            position: absolute;
             width: 50%;
             height: 100%;
             background-color: antiquewhite;
+            
             img{
                 position: absolute;
                 max-width: 100%;
@@ -24,6 +25,13 @@
                 left: 50%;
                 transform: translate(-50%, -50%);   
             }
-        }     
+        }  
+        .div_texto{
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            background-color: blueviolet;
+            right: 0px;
+        }  
     } 
 }
