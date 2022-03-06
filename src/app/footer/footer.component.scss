@@ -1,0 +1,25 @@
+.foot{
+    background-color: rgb(46, 41, 41);
+    color: white;
+}
+
+.containerFooter{
+    display: flex;
+}
+
+
+.v-line{
+    margin-top: 13px;
+    border-left: 2px solid white;
+    height: 18%;
+    left: 12%;
+    position: absolute;
+   }
+
+.containerFooter p{
+    font-size: 20px;
+}
+
+.copy, .quienesSomos, .contact{
+    margin-left: 6%;
+}

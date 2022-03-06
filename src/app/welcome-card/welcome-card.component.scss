@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+.welcome{
+    height: 33rem;
+    background-color: rgb(255, 197, 197);
+}
+.image{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    //background-image: url('https://images.pexels.com/photos/111963/pexels-photo-111963.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    //background-image: url('https://images.pexels.com/photos/4609799/pexels-photo-4609799.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-image: url('https://images.pexels.com/photos/163688/hiker-travel-trip-wander-163688.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');   
+    //background-image: url('https://images.pexels.com/photos/9353616/pexels-photo-9353616.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 75%;
+    opacity: 0.65;
+    
+}
+.title{
+    top: 20%;
+    left: 10%;
+    text-align: center;
+    position: absolute;
+    & h1, h2{
+        color: #212844;
+        font-family: 'DM Serif Display', serif;
+    }
+    & h1{
+        font-size: 4rem;
+        margin-block: 0;
+    }
+    & h2{
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+}
+button{
+    margin-block: 2rem;
+}
+a{
+    display: inline-flex;
+}

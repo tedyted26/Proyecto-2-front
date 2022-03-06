@@ -1,9 +1,13 @@
 <div id="frame-central">
-    <h1>Este es el frame central</h1>
+    <app-welcome-card></app-welcome-card>
     <!--He puesto 2 tarjetas de descripcion para probar
     Aqui deberian ir el resto de tarjetas-->
     <li *ngFor="let i of cards_desc">
         <app-descripcion-card  [imagen]="i.url" [titulo]="i.titulo" [texto]="i.texto"></app-descripcion-card>
     </li>
     
+    <app-descripcion-card></app-descripcion-card>
+    <app-descripcion-card></app-descripcion-card>
+    <app-seccion-equipo></app-seccion-equipo>
+    <app-footer></app-footer>
 </div>
