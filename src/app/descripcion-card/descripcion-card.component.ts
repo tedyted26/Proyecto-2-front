@@ -8,6 +8,11 @@ import { Component, OnInit, Input } from '@angular/core';
 export class DescripcionCardComponent implements OnInit {
   @Input("imagen") 
   url_img: String = "";
+
+  @Input()
+  titulo: String = "";
+  @Input()
+  texto: String = "";
   constructor() { }
 
   ngOnInit(): void {

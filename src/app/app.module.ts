@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { FrameCentralComponent } from './frame-central/frame-central.component';
 import { DescripcionCardComponent } from './descripcion-card/descripcion-card.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
