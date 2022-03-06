@@ -10,6 +10,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { FooterComponent } from './footer/footer.component';
 import { WelcomeCardComponent } from './welcome-card/welcome-card.component';
+import { SeccionEquipoComponent } from './seccion-equipo/seccion-equipo.component';
+import { TarjetaIntegranteComponent } from './tarjeta-integrante/tarjeta-integrante.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { WelcomeCardComponent } from './welcome-card/welcome-card.component';
     DescripcionCardComponent,
     NavbarComponent,
     FooterComponent,
-    WelcomeCardComponent
+    WelcomeCardComponent,
+    SeccionEquipoComponent,
+    TarjetaIntegranteComponent
   ],
   imports: [
     BrowserModule,
