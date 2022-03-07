@@ -1,5 +1,8 @@
-.lista-integrantes{
-    background-color: #BBBBF1;
+#lista-integrantes{
+    background-color: #35416F;
+    font-family: 'DM Serif Display', serif;
+    text-align: center;
+    color: white;
 }
 .grid-container {
     display: grid;
@@ -9,8 +12,4 @@
 .grid-item{
     display: flex;
     justify-content: center;
-}
-
-img {
-    border-radius: 50%;
 }
