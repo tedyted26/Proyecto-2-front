@@ -1,5 +1,6 @@
 .descripcion_card{
-    background-color: rgba(108, 208, 255, 1);
+    --fondo: rgb(255, 251, 242);
+    background-color: var(--fondo);
 
     #div_central{
         position: relative;
@@ -9,29 +10,32 @@
         top: 1%;
         background-color: green;
         //overflow: hidden;
+        display: flex;
         .div_img{
-            position: absolute;
+            //position: absolute;
             width: 50%;
             height: 100%;
             background-color: antiquewhite;
-            
+            background-position: 50% 0%;
+            background-size: cover;
             img{
-                position: absolute;
+                //position: absolute;
                 max-width: 100%;
                 max-height: 100%;
                 width: 100%;
                 height: auto;
                 top: 50%;
                 left: 50%;
-                transform: translate(-50%, -50%);   
+                //transform: translate(-50%, -50%);   
             }
         }  
         .div_texto{
-            position: absolute;
+            //position: absolute;
             width: 50%;
             height: 100%;
-            background-color: blueviolet;
-            right: 0px;
+            background-color: var(--fondo);
+            color: #35416fff;
+            
         }  
     } 
 }
