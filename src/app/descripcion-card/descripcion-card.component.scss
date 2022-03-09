@@ -1,7 +1,8 @@
 .descripcion_card{
     --fondo: rgb(255, 251, 242);
+    --letra: #35416fff;
     background-color: var(--fondo);
-
+    margin: 5rem auto;
     #div_central{
         position: relative;
         height: 98%;
@@ -13,7 +14,7 @@
         display: flex;
         .div_img{
             //position: absolute;
-            width: 50%;
+            width: 45%;
             height: 100%;
             background-color: antiquewhite;
             background-position: 50% 0%;
@@ -29,13 +30,27 @@
                 //transform: translate(-50%, -50%);   
             }
         }  
+        hr{
+            height: 2px;
+            width: 80%;
+            background: radial-gradient( red 10%, rgb(255, 251, 242) 80%);
+            //background-image: radial-gradient( fadeout(var(--letra), 0%) 40%, fadeout(var(--letra), 100%) 80%);
+        }
         .div_texto{
             //position: absolute;
-            width: 50%;
+            width: 55%;
             height: 100%;
             background-color: var(--fondo);
-            color: #35416fff;
-            
-        }  
+            color: var(--letra);
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            //order: -1;
+            h2{
+                font-size: 2.5rem;
+                margin-top: 1rem;
+            }
+        }
+
     } 
 }
