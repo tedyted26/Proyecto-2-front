@@ -14,6 +14,14 @@ import { SeccionEquipoComponent } from './seccion-equipo/seccion-equipo.componen
 import { TarjetaIntegranteComponent } from './tarjeta-integrante/tarjeta-integrante.component';
 import { SentimentAnalysisComponent } from './sentiment-analysis/sentiment-analysis.component';
 
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes = [
+  {path: "", pathMatch: "full", redirectTo: "home"},
+   { path: 'home', component: FrameCentralComponent},
+   { path: 'Sentimiento', component: DescripcionCardComponent},
+];
+
 
 @NgModule({
   declarations: [
@@ -31,7 +39,8 @@ import { SentimentAnalysisComponent } from './sentiment-analysis/sentiment-analy
     BrowserModule,
     AppRoutingModule, 
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
