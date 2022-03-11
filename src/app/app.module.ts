@@ -13,6 +13,14 @@ import { WelcomeCardComponent } from './welcome-card/welcome-card.component';
 import { SeccionEquipoComponent } from './seccion-equipo/seccion-equipo.component';
 import { TarjetaIntegranteComponent } from './tarjeta-integrante/tarjeta-integrante.component';
 
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes = [
+  {path: "", pathMatch: "full", redirectTo: "home"},
+   { path: 'home', component: FrameCentralComponent},
+   { path: 'Sentimiento', component: DescripcionCardComponent},
+];
+
 
 @NgModule({
   declarations: [
@@ -29,7 +37,8 @@ import { TarjetaIntegranteComponent } from './tarjeta-integrante/tarjeta-integra
     BrowserModule,
     AppRoutingModule, 
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
