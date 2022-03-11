@@ -12,6 +12,7 @@ import { FooterComponent } from './footer/footer.component';
 import { WelcomeCardComponent } from './welcome-card/welcome-card.component';
 import { SeccionEquipoComponent } from './seccion-equipo/seccion-equipo.component';
 import { TarjetaIntegranteComponent } from './tarjeta-integrante/tarjeta-integrante.component';
+import { SentimentAnalysisComponent } from './sentiment-analysis/sentiment-analysis.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { TarjetaIntegranteComponent } from './tarjeta-integrante/tarjeta-integra
     FooterComponent,
     WelcomeCardComponent,
     SeccionEquipoComponent,
-    TarjetaIntegranteComponent
+    TarjetaIntegranteComponent,
+    SentimentAnalysisComponent
   ],
   imports: [
     BrowserModule,

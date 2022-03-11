@@ -4,9 +4,12 @@
     <!--He puesto 2 tarjetas de descripcion para probar
     Aqui deberian ir el resto de tarjetas-->
     <li *ngFor="let c of cards_desc; let i = index">
-        <app-descripcion-card  [imagen]="c.url" [titulo]="c.titulo" [texto]="c.texto" [c_index]="i%2"></app-descripcion-card>
+        <app-descripcion-card [imagen]="c.url" [titulo]="c.titulo" [texto]="c.texto" [c_index]="i%2">
+        </app-descripcion-card>
     </li>
-
+    <div style = "margin: 40px; text-align: center ;">
+        <app-sentiment-analysis></app-sentiment-analysis>
+    </div>
     <app-seccion-equipo></app-seccion-equipo>
     <app-footer></app-footer>
 </div>
