@@ -3,9 +3,11 @@ h2{
     font-family: 'DM Serif Display', serif;
 }
 #lista-integrantes{
-    background-color: #35416F;
+    //background-color: #35416F;
+    background-color: var(--azul-casi-negro);
     text-align: center;
     color: white;
+    padding-bottom: 3rem;
 }
 .grid-container {
     display: grid;
