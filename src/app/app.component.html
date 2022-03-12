@@ -8,7 +8,12 @@
 (Sanjo): El footer creo que es mejor introducirlo como un componente más en el Frame central,
 aunque aquí se puede probar 
 -footer-->
-  <app-frame-central></app-frame-central>
+  <app-frame-central>
+    <button (click)="getData()"> Get Data</button>
+    <div *ngFor="let post of posts | async">
+      {{ post | json }}
+    </div>
+  </app-frame-central>
   <router-outlet></router-outlet>
   
 </div>

@@ -13,6 +13,9 @@ import { WelcomeCardComponent } from './welcome-card/welcome-card.component';
 import { SeccionEquipoComponent } from './seccion-equipo/seccion-equipo.component';
 import { TarjetaIntegranteComponent } from './tarjeta-integrante/tarjeta-integrante.component';
 import { SentimentAnalysisComponent } from './sentiment-analysis/sentiment-analysis.component';
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 
 @NgModule({
@@ -31,7 +34,8 @@ import { SentimentAnalysisComponent } from './sentiment-analysis/sentiment-analy
     BrowserModule,
     AppRoutingModule, 
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

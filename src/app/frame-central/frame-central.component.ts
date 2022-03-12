@@ -1,5 +1,6 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { CardInfoModel } from '../modelos/card-info-model.model';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-frame-central',

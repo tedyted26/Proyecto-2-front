@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-
+import { SentimentAnalysisService } from '../sentiment-analysis.service';
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-sentiment-analysis',
   templateUrl: './sentiment-analysis.component.html',
@@ -11,11 +12,17 @@ export class SentimentAnalysisComponent implements OnInit {
   formulario: String = "";
   @Input("foto") 
   foto: String = "assets/fotocompu2.png";
+  posts:any;
+  readonly ROOT = "http://localhost:5000"
 
   
-  constructor() { }
+  constructor(private service: SentimentAnalysisService, private http: HttpClient) {
 
-  ngOnInit(): void {
+   }
+
+  ngOnInit(){
+    this.service.getDataFromBackend().subscribe((response) =>{alert(response)} )
   }
 
 }
+
