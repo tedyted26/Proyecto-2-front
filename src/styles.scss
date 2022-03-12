@@ -3,9 +3,10 @@
     --azul-casi-negro: #212844;
     --rojo-error: rgba(255, 81, 81, 0.767);
     --verde-correcto: rgb(94, 185, 155);
+    --fondo: rgb(255, 251, 242);
 
     /* CSS HEX */
-    --dark-cornflower-blue: #35416fff;
+    --          : #35416fff;
     --maximum-blue-purple: #bbbbf1ff;
     --banana-mania: #fde6b0ff;
     --tumbleweed: #deab90ff;
@@ -37,9 +38,11 @@
 
 .card_base{
     position: relative;
-    height: 80vh;
-    width: 100%;
-    background-color: #f0f1ffc0;
+    height: 75vh;
+    width: 95%;
+    margin-inline: auto;
+    background-color: var(--fondo);
+    border-radius: 30px;
 }
 
 //COSAS DE BOOTSRAP CAMBIADAS
