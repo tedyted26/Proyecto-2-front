@@ -1,31 +1,48 @@
 .foot{
     background-color: rgb(46, 41, 41);
     color: white;
+    
 }
+
+.divLogoFoot{
+    display: inline-block;
+    margin-left: 3%;
+    text-align: center;
+}
+
+#tfoot{
+    font-size: 18px;
+}
+
 
 .containerFooter{
     display: flex;
     padding: 20px 0px;
+    justify-content: center;
 }
 
-#logo{
+#logoBlanco{
+    width: 200px;
+    padding-top: 30px;
+}
+
+#copy{
     width: 150px;
-    margin-top: 35px;
-    margin-left: 5px;
 }
 
-.v-line{
-    margin-top: 7px;
-    border-left: 2px solid white;
-    height: 22%;
-    left: 11%;
-    position: absolute;
-   }
 
 .containerFooter p{
     font-size: 20px;
 }
 
 .foot-id{
-    margin-left: 4%;
+    margin-top: 1%;
+    margin-left: 10%;
+
+    h3{
+        color: #ed9c93ff;
+    }
 }
+
+
+
