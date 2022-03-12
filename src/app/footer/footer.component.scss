@@ -5,14 +5,20 @@
 
 .containerFooter{
     display: flex;
+    padding: 20px 0px;
 }
 
+#logo{
+    width: 150px;
+    margin-top: 35px;
+    margin-left: 5px;
+}
 
 .v-line{
-    margin-top: 13px;
+    margin-top: 7px;
     border-left: 2px solid white;
-    height: 18%;
-    left: 12%;
+    height: 22%;
+    left: 11%;
     position: absolute;
    }
 
@@ -20,6 +26,6 @@
     font-size: 20px;
 }
 
-.copy, .quienesSomos, .contact{
-    margin-left: 6%;
+.foot-id{
+    margin-left: 4%;
 }

@@ -10,7 +10,7 @@ import { AppComponent } from '../app.component';
 export class FrameCentralComponent implements OnInit {
   cards_desc = [
     new CardInfoModel("https://cdn.pixabay.com/photo/2016/04/20/08/21/entrepreneur-1340649_960_720.jpg",
-  "Este es el primer titulo","Y el primer texto"),
+  "Este es el primer titulo","Y el primer texto asdf asf asdf afs"),
   new CardInfoModel("https://cdn.pixabay.com/photo/2020/07/08/04/12/work-5382501_960_720.jpg",
   "Este es el segundo titulo","Y el segundo texto"),
   new CardInfoModel("https://cdn.pixabay.com/photo/2020/07/08/04/12/work-5382501_960_720.jpg",

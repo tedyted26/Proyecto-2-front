@@ -17,6 +17,14 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes = [
+  {path: "", pathMatch: "full", redirectTo: "home"},
+   { path: 'home', component: FrameCentralComponent},
+   { path: 'Sentimiento', component: SentimentAnalysisComponent},
+];
+
 
 @NgModule({
   declarations: [
@@ -35,7 +43,11 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule, 
     MatToolbarModule,
     MatButtonModule,
-    HttpClientModule
+
+    HttpClientModule,
+
+    RouterModule.forRoot(appRoutes)
+
   ],
   providers: [],
   bootstrap: [AppComponent]
