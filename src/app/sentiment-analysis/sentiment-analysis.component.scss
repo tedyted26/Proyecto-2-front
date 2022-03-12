@@ -2,14 +2,45 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: josefin sans;
-
-
 }
 :root{
     --accent: #2962ff
     --secondary: #2962ff
     --white: #2962ff
+}
+
+.title_container{
+    background-color: var(--maximum-blue-purple);
+    height: 33rem;
+}
+
+.img{
+    height: 100%;
+    width: 100%;
+    background-image: url("https://images.pexels.com/photos/848573/pexels-photo-848573.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0% 75%;
+    opacity: 0.7;
+   
+}
+
+.title{
+    width: 100%;
+    text-align: center;
+    font-family: 'DM Serif Display', serif;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: 16rem;
+    margin-bottom: 3rem;
+    & h2 {
+        font-size: 4rem;
+    }
+    & h3{
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
 }
 
 .form-container{
