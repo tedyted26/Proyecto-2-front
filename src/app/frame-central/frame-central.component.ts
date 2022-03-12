@@ -8,13 +8,15 @@ import { CardInfoModel } from '../modelos/card-info-model.model';
 })
 export class FrameCentralComponent implements OnInit {
   cards_desc = [
-    new CardInfoModel("https://cdn.pixabay.com/photo/2016/04/20/08/21/entrepreneur-1340649_960_720.jpg",
-  "Misión","Ahorrar tiempo y dinero a nuestros consumidores a la hora de realizar un viaje además de garantizarles la seguridad que necesitan."),
-  new CardInfoModel("https://cdn.pixabay.com/photo/2020/07/08/04/12/work-5382501_960_720.jpg",
-  "Visión","Convertirse en la plataforma de organización de viajes número uno de españa en cuanto al cuidado y atención al cliente gracias a nuestro análisis intensivo de los destinos con respecto a las necesidades de cada usuario."),
-  new CardInfoModel("https://cdn.pixabay.com/photo/2020/07/08/04/12/work-5382501_960_720.jpg",
-  "Valores","Inclusión social, respeto al individuo, seguridad del cliente, facilidad de trámites."),
+    new CardInfoModel("https://images.pexels.com/photos/4553618/pexels-photo-4553618.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+  "Misión","Queremos garantizar la seguridad y comodidad de nuestros clientes a la hora de viajar, sobretodo a aquellos pertenecientes a colectivos sociales vulnerables propensos a ser víctimas de discriminaciones o delitos de odio."),
+  new CardInfoModel("https://media.istockphoto.com/photos/concept-picture-id872670490?k=20&m=872670490&s=612x612&w=0&h=2LVHEll6P7oryjVTqcJemHSjuvxersY29Nn5J0BZGik=",
+  "Visión","Nos basamos en la inteligencia artificial y el análisis de sentimiento para determinar si las comunidades de los destinos escogidos por nuestros clientes pueden afectar negativamente a su integridad."),
+  new CardInfoModel("https://images.pexels.com/photos/7479659/pexels-photo-7479659.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+  "Valores","Inclusión social, respeto al individuo, seguridad del cliente, comodidad, facilidad de trámites."),
 ];
+
+//https://cdn.pixabay.com/photo/2020/07/08/04/12/work-5382501_960_720.jpg
 
   constructor() { }
 

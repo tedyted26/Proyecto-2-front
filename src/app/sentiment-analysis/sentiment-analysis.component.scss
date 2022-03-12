@@ -12,6 +12,7 @@
 .title_container{
     background-color: var(--maximum-blue-purple);
     height: 33rem;
+    margin-bottom: 4rem;
 }
 
 .img{
@@ -33,7 +34,6 @@
     color: white;
     position: absolute;
     top: 16rem;
-    margin-bottom: 3rem;
     & h2 {
         font-size: 4rem;
     }
