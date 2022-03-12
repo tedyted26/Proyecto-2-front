@@ -1,13 +1,15 @@
 <mat-toolbar>
-    <img src="assets/images/logo.png" id="logo">
+    <a mat-button [routerLink] = "['/home']">
+        <img src="assets/images/logo.png" id="logo" >
+    </a>
 
     <div class="spacer"></div>
     
     <a mat-button [routerLink] = "['/home']" routerLinkActive="active" class="navElement">Inicio</a>
     <a mat-button [routerLink] = "['/Sentimiento']" routerLinkActive="active" class="navElement">Análisis de Sentimiento</a>
-    <a mat-button [routerLink] = "['/AboutUs']" class="navElement">Quienes Somos</a>
+    <!--<a mat-button [routerLink] = "['/AboutUs']" class="navElement">Quienes Somos</a>
     <a mat-button class="navElement">Contacto</a>
-    <a mat-raised-button class="bLogin">Login</a>
+    <a mat-raised-button class="bLogin">Login</a>-->
 
 
 </mat-toolbar>

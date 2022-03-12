@@ -1,4 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+:root{ //Dejo el mismo color en hex y rgb por si quereis hacer un color similar cambiando los valores a mano
+    --azul-casi-negro: #212844;
+    --rojo-error: rgba(255, 81, 81, 0.767);
+    --verde-correcto: rgb(94, 185, 155);
+
+    /* CSS HEX */
+    --dark-cornflower-blue: #35416fff;
+    --maximum-blue-purple: #bbbbf1ff;
+    --banana-mania: #fde6b0ff;
+    --tumbleweed: #deab90ff;
+    --vivid-tangerine: #ed9c93ff;
+    
+    /* CSS RGB */
+    --dark-cornflower-blue: rgba(53, 65, 111, 1);
+    --maximum-blue-purple: rgba(187, 187, 241, 1);
+    --banana-mania: rgba(253, 230, 176, 1);
+    --tumbleweed: rgba(222, 171, 144, 1);
+    --vivid-tangerine: rgba(237, 156, 147, 1);
+    
+    /* SCSS Gradient */
+    $gradient-top: linear-gradient(0deg, #35416fff, #bbbbf1ff, #fde6b0ff, #deab90ff, #ed9c93ff);
+    $gradient-right: linear-gradient(90deg, #35416fff, #bbbbf1ff, #fde6b0ff, #deab90ff, #ed9c93ff);
+    $gradient-bottom: linear-gradient(180deg, #35416fff, #bbbbf1ff, #fde6b0ff, #deab90ff, #ed9c93ff);
+    $gradient-left: linear-gradient(270deg, #35416fff, #bbbbf1ff, #fde6b0ff, #deab90ff, #ed9c93ff);
+    $gradient-top-right: linear-gradient(45deg, #35416fff, #bbbbf1ff, #fde6b0ff, #deab90ff, #ed9c93ff);
+    $gradient-bottom-right: linear-gradient(135deg, #35416fff, #bbbbf1ff, #fde6b0ff, #deab90ff, #ed9c93ff);
+    $gradient-top-left: linear-gradient(225deg, #35416fff, #bbbbf1ff, #fde6b0ff, #deab90ff, #ed9c93ff);
+    $gradient-bottom-left: linear-gradient(315deg, #35416fff, #bbbbf1ff, #fde6b0ff, #deab90ff, #ed9c93ff);
+    $gradient-radial: radial-gradient(#35416fff, #bbbbf1ff, #fde6b0ff, #deab90ff, #ed9c93ff);
+}
+
 #index_body{
     margin: 0 auto;
     background-color: rgb(255, 251, 242);
@@ -9,5 +40,63 @@
     height: 80vh;
     width: 100%;
     background-color: #f0f1ffc0;
+}
+
+//COSAS DE BOOTSRAP CAMBIADAS
+.btn{
+    &.btn-primary{
+        background-color: var(--dark-cornflower-blue);
+        border-color: var(--dark-cornflower-blue);
+        &:hover{
+            background-color: rgb(65, 82, 139);
+            border-color: rgb(65, 82, 139);
+        }
+    }
+    &.btn-secondary{
+        background-color: var(--vivid-tangerine);
+        border-color: var(--vivid-tangerine);
+        &:hover{
+            background-color: rgb(236, 144, 134);
+            border-color: rgb(236, 144, 134);
+        }
+    }
+    &.btn-success{
+        background-color: var(--verde-correcto);
+        border-color: var(--verde-correcto);
+        &:hover{
+            background-color: rgb(84, 167, 139);
+            border-color: rgb(84, 167, 139);
+        }
+    }
+    &.btn-danger{
+        background-color:var(--rojo-error);
+        border-color: var(--rojo-error);
+        &:hover{
+            background-color: rgba(255, 81, 81, 0.918);
+            border-color: rgba(255, 81, 81, 0.918);
+        }
+    }
+    &.btn-warning{
+        background-color: var(--tumbleweed);
+        border-color: var(--tumbleweed);
+        &:hover{
+            background-color: rgb(219, 157, 124);
+            border-color: rgb(219, 157, 124);
+        }
+    }
+    &.btn-info{
+        background-color: var(--maximum-blue-purple);
+        border-color: var(--maximum-blue-purple);
+        &:hover{
+            background-color: rgb(173, 180, 241);
+            border-color: rgb(173, 180, 241);
+        }
+    }
+}
+.badge.badge-primary{
+    color: white;
+    &:hover{
+        color: rgb(65, 82, 139);
+    }
 }
 
