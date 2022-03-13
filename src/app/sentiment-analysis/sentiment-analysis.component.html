@@ -1,33 +1,35 @@
 <div class="title_container">
-    <div class="img">
-
-    </div>
+    <div class="img"></div>
     <div class="title">
         <h2>Análisis de sentimiento</h2>
         <h3>La nueva forma de disfrutar de tus vacaciones</h3>
     </div>
 </div>
 
-<!--<h2>
-    Esta es la manera más sencilla
-    <strong>de viajar seguro</strong>
-</h2>-->
-<div class="form-container">
-    <div class="sidebar">
-        <img src="assets/images/fotocompu2.png" alt="Foto integrante" width="100" alt="form_image">
-    </div>
-    <form #dataFetch="ngForm" (ngSubmit)="onClickSubmit(dataFetch.value)">
-                
-        <input type = "text" name = "data"  ngModel placeholder = "aca va tu texto" >
-        <button type="submit">Ver sentimiento</button>        
-    </form>
-    
-
-    <div>
-        {{ sentimiento }}
-    </div>
-   
+<div class="container content_container">
+    <h5 class="text-center">Escribe cualquier texto y pulsa el botón</h5>
+    <hr>
+    <form #dataFetch="ngForm" (ngSubmit)="onClickSubmit(dataFetch.value)" id="sentimentform">
+        <div class="row row_text">
+            <div class="col-md-5">
+                <textarea class = "form-control" rows="6" cols="50"  name = "data"  ngModel form="sentimentform" placeholder="Pj: En Barcelona hay un tráfico terrible"></textarea>
+            </div>
+            <div class="col-md-2 text-center">
+                <button  type ="submit" class="btn btn-primary">Analizar</button>
+            </div>
+            <div class="col-md-5">
+                <textarea class="form-control" disabled = "disabled" rows = "6" cols="50" placeholder="Aquí aparecerán los resultados del análisis"> {{ sentimiento }} </textarea>
+            </div>
+        </div>
+    </form> 
+    <h4>¿Quieres saber qué es el análisis de sentimiento? ¡Te lo contamos!</h4>
+    <p>El análisis de sentimiento es una técnica para extraer información subjetiva de textos, tales como opiniones y emociones. Este análisis se realiza mediante tecnologías como la inteligencia artificial y el procesamiento del lenguaje natural. En palabras simples, utilizamos la tecnología para clasificar si un texto o comentario es positivo o negativo.</p>
+    <h4>¿Cómo te puede ayudar a encontrar un buen destino?</h4>
+    <p>Muchas compañías sólo se enfocan en la reserva del viaje y en las características objetivas y generales del destino (como por ejemplo sitios a los que salir, comercios, actividades turísticas...). Sin embargo, nosotros preferimos ir un paso más allá: analizar la comunidad y el entorno para proporcionar información útil y una estancia tranquila y cómoda a nuestros clientes.</p>
+    <h4>Mucho texto y poca acción...</h4>
+    <p>Por ello ponemos a tu disposición esta pequeña parte de nuestra nueva herramienta. ¡Ojo!, está aún en periodo de pruebas y no está implementada en nuestro sistema. Pero no te preocupes, estamos trabajando día y noche para añadirla lo antes posible. </p> 
 </div>
+
 
 <!--
 <div style="display:flex;

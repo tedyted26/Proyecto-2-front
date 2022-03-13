@@ -1,18 +1,6 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-:root{
-    --accent: #2962ff
-    --secondary: #2962ff
-    --white: #2962ff
-}
-
 .title_container{
     background-color: var(--maximum-blue-purple);
     height: 33rem;
-    margin-bottom: 4rem;
 }
 
 .img{
@@ -43,48 +31,49 @@
     }
 }
 
-.form-container{
-    background:linear-gradient(#35416F, #fde6b0ff);
-    width: 100%;
-    height: 85vh;
-    display: flex;
-    justify-content: center;
-    width:100%;
-    margin: 0 auto;
-}
-.sidebar{
-    width: 35%;
-    height: 100%;
-    background: var(--secondary);
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
-}
+.content_container{
+    margin-block: 4rem;
+    margin-inline: auto;
+    padding-inline: 5rem;
+    padding-block: 3rem;
+    border-radius: 30px;
+    background: rgba(222, 171, 144, 0.678);
+    height: fit-content;
+    color: var(--azul-casi-negro);
 
-.sidebar img{
-    width: 100%;
+    p{  
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+    }
 
-}
-.sidebar p{
-    font-size: 2rem;
-    font-family: righteous;
-    width: 80%;
-    color:var(--accent);
-}
-form{
-    width: 65%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-form h1{
-    font-size: 5rem;
-    color: var(--accent);
-    font-family: righteous;
-    margin: 0 0 50px 0;
+    h4{
+        font-size: 1.6rem;
+    }
+
+    hr{
+        height: 2px;
+        width: 40%;
+        margin-inline: auto;
+        background: radial-gradient( rgb(255, 0, 98) 10%, var(--vivid-tangerine) 80%);
+        //background-image: radial-gradient( fadeout(var(--letra), 0%) 40%, fadeout(var(--letra), 100%) 80%);
+    }
+
+    & .row{
+        margin-block:3rem;
+        margin-inline: 0;
+        justify-content: space-around;
+
+        & .col-md-2{
+            display: flex;
+            padding-block: 1rem;
+        }
+        button{
+            width: 100px;
+            align-self: center; 
+            margin-inline: auto;  
+        }
+    }
 }
 input{
     width:50%;
@@ -93,28 +82,4 @@ input{
     outline:none; 
     margin-bottom:25px;
     font-size:1.01rem;
-}
-
-label{
-    width:50%;
-    padding: 0 0 10px 5px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
-}
-
-button{
-    width: 50%;
-    padding: 12px 0;
-    border: none;
-    outline: none;
-    background: #35416F;
-    color: #fff;
-    font-size: 1.1rem;
-    margin-top: 25px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-button:hover{
-    background:#fff;
-    color: #35416F;
 }
