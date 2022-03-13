@@ -10,9 +10,9 @@ export class SentimentAnalysisService {
 
   constructor(private http: HttpClient) {}
 
-   public getDataFromBackend():Observable<Object>{
-     return this.http.get("http://127.0.0.1:5000/");
-   }
+    public getDataFromBackend():Observable<Object>{
+      return this.http.get("http://127.0.0.1:5000/");
+    }
 
 }
 
