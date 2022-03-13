@@ -8,7 +8,7 @@ mat-toolbar{
 .bLogin{
     background-color: #35416fff;
     color: white;
-    margin-left: 5px;
+    margin-left: 1%;
 
     &:hover{
         text-shadow: 0px 1px 3px white;
@@ -21,20 +21,21 @@ mat-toolbar{
     color: #35416fff;
 
     &:hover{
-        text-shadow: 0px 1px 1px #35416fff;
+        text-shadow: 0px 0.5px 0.5px #35416fff;
     }
 }
 
 
 #logo{
-    width: 110px;
-    margin-top: 30px;
+    width: 70px;
+    margin-block: auto;
 }
 
 .active{
     color: #ed9c93ff;
 
     &:hover{
-        text-shadow: 0px 1px 1px #ed9c93ff;
+        text-shadow: 0px 0.5px 0.5px #ed9c93ff;
     }
+
 }
