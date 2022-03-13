@@ -35,8 +35,7 @@
     margin-block: 4rem;
     margin-inline: auto;
     padding-inline: 5rem;
-    padding-bottom: 3rem;
-    padding-top: 4rem;
+    padding-block: 3rem;
     border-radius: 30px;
     background: rgba(222, 171, 144, 0.678);
     height: fit-content;
@@ -49,11 +48,7 @@
     }
 
     h4{
-        font-size: 1.7rem;
-    }
-
-    h5{
-        margin-top: 3rem;
+        font-size: 1.6rem;
     }
 
     hr{
@@ -65,7 +60,7 @@
     }
 
     & .row{
-        margin-block:2rem;
+        margin-block:3rem;
         margin-inline: 0;
         justify-content: space-around;
 
