@@ -1,54 +1,6 @@
-.root{
-/* CSS HEX */
---dark-cornflower-blue: #35416fff;
---maximum-blue-purple: #bbbbf1ff;
---banana-mania: #fde6b0ff;
---tumbleweed: #deab90ff;
---vivid-tangerine: #ed9c93ff;
-
-
-/* CSS HSL */
---dark-cornflower-blue: hsla(228, 35%, 32%, 1);
---maximum-blue-purple: hsla(240, 66%, 84%, 1);
---banana-mania: hsla(42, 95%, 84%, 1);
---tumbleweed: hsla(21, 54%, 72%, 1);
---vivid-tangerine: hsla(6, 71%, 75%, 1);
-
-/* SCSS HEX */
-$dark-cornflower-blue: #35416fff;
-$maximum-blue-purple: #bbbbf1ff;
-$banana-mania: #fde6b0ff;
-$tumbleweed: #deab90ff;
-$vivid-tangerine: #ed9c93ff;
-
-/* SCSS HSL */
-$dark-cornflower-blue: hsla(228, 35%, 32%, 1);
-$maximum-blue-purple: hsla(240, 66%, 84%, 1);
-$banana-mania: hsla(42, 95%, 84%, 1);
-$tumbleweed: hsla(21, 54%, 72%, 1);
-$vivid-tangerine: hsla(6, 71%, 75%, 1);
-
-/* SCSS RGB */
-$dark-cornflower-blue: rgba(53, 65, 111, 1);
-$maximum-blue-purple: rgba(187, 187, 241, 1);
-$banana-mania: rgba(253, 230, 176, 1);
-$tumbleweed: rgba(222, 171, 144, 1);
-$vivid-tangerine: rgba(237, 156, 147, 1);
-
-/* SCSS Gradient */
-$gradient-top: linear-gradient(0deg, #35416fff, #bbbbf1ff, #fde6b0ff, #deab90ff, #ed9c93ff);
-$gradient-right: linear-gradient(90deg, #35416fff, #bbbbf1ff, #fde6b0ff, #deab90ff, #ed9c93ff);
-$gradient-bottom: linear-gradient(180deg, #35416fff, #bbbbf1ff, #fde6b0ff, #deab90ff, #ed9c93ff);
-$gradient-left: linear-gradient(270deg, #35416fff, #bbbbf1ff, #fde6b0ff, #deab90ff, #ed9c93ff);
-$gradient-top-right: linear-gradient(45deg, #35416fff, #bbbbf1ff, #fde6b0ff, #deab90ff, #ed9c93ff);
-$gradient-bottom-right: linear-gradient(135deg, #35416fff, #bbbbf1ff, #fde6b0ff, #deab90ff, #ed9c93ff);
-$gradient-top-left: linear-gradient(225deg, #35416fff, #bbbbf1ff, #fde6b0ff, #deab90ff, #ed9c93ff);
-$gradient-bottom-left: linear-gradient(315deg, #35416fff, #bbbbf1ff, #fde6b0ff, #deab90ff, #ed9c93ff);
-$gradient-radial: radial-gradient(#35416fff, #bbbbf1ff, #fde6b0ff, #deab90ff, #ed9c93ff);
-}
-
 #root_div{
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: fit-content;
+    background-color: white;
 }

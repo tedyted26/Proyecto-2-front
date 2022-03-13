@@ -1,8 +1,13 @@
-#lista-integrantes{
-    background-color: #35416F;
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+h2{
     font-family: 'DM Serif Display', serif;
+}
+#lista-integrantes{
+    //background-color: #35416F;
+    background-color: var(--dark-cornflower-blue);
     text-align: center;
     color: white;
+    padding-bottom: 3rem;
 }
 .grid-container {
     display: grid;
