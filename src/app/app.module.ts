@@ -14,6 +14,7 @@ import { SeccionEquipoComponent } from './seccion-equipo/seccion-equipo.componen
 import { TarjetaIntegranteComponent } from './tarjeta-integrante/tarjeta-integrante.component';
 import { SentimentAnalysisComponent } from './sentiment-analysis/sentiment-analysis.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -43,7 +44,7 @@ const appRoutes: Routes = [
     AppRoutingModule, 
     MatToolbarModule,
     MatButtonModule,
-
+    FormsModule,
     HttpClientModule,
 
     RouterModule.forRoot(appRoutes)
