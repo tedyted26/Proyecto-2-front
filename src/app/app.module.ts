@@ -16,15 +16,7 @@ import { SentimentAnalysisComponent } from './sentiment-analysis/sentiment-analy
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
-
-
 import { RouterModule, Routes } from '@angular/router';
-
-const appRoutes: Routes = [
-  {path: "", pathMatch: "full", redirectTo: "home"},
-   { path: 'home', component: FrameCentralComponent},
-   { path: 'Sentimiento', component: SentimentAnalysisComponent},
-];
 
 
 @NgModule({
@@ -46,8 +38,6 @@ const appRoutes: Routes = [
     MatButtonModule,
     FormsModule,
     HttpClientModule,
-
-    RouterModule.forRoot(appRoutes)
 
   ],
   providers: [],
