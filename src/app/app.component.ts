@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SentimentAnalysisService } from './sentiment-analysis.service';
+import { SentimentAnalysisService } from './services/sentiment-analysis.service';
 
 @Component({
   selector: 'app-root',

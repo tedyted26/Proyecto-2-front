@@ -1,11 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Data } from '@angular/router';
-import { SentimentAnalysisService } from '../sentiment-analysis.service';
+import { SentimentAnalysisService } from '../services/sentiment-analysis.service';
 @Component({
   selector: 'app-sentiment-analysis',
   templateUrl: './sentiment-analysis.component.html',
   styleUrls: ['./sentiment-analysis.component.scss']
 })
+
 export class SentimentAnalysisComponent {
   foto: String = "assets/fotocompu2.png";
   sentimiento: String = "";
