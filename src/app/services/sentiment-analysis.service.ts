@@ -11,7 +11,7 @@ export class SentimentAnalysisService {
   constructor(private http: HttpClient) {}
 
   getDataFromBackend(text:String): Observable<Data> {
-     return this.http.get<Data>(`http://127.0.0.1:5000/app-sentiment-analysis?text=` + text);
+     return this.http.post<Data>("http://127.0.0.1:5000/app-sentiment-analysis", {texto: text})
    }
 
 }
