@@ -18,21 +18,23 @@
     display: flex;
     padding: 20px 0px;
     justify-content: center;
+    p{
+        font-size: 20px;
+    }
+}
+
+#tfoot2{
+    font-size: 16px;
 }
 
 #logoBlanco{
-    width: 200px;
-    padding-top: 3rem;
+    width: 150px;
+    padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
 #copy{
     width: 150px;
-}
-
-
-.containerFooter p{
-    font-size: 20px;
 }
 
 .foot-id{
