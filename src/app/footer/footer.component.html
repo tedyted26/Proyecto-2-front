@@ -2,9 +2,37 @@
     <div class="containerFooter">
         <div class="divLogoFoot">
             <img src="assets/images/logoBlanco.png" id="logoBlanco">
-            <p id="tfoot">¡Te ayudamos a elegir el mejor destino <br>para que pases las mejores vacaciones de tu vida!</p>
+            <p id="tfoot">¡Te ayudamos a elegir el mejor destino para <br>que pases las mejores vacaciones de tu vida!</p>
             <p id="tfoot2">©Copyright. All rights reserved.</p>
         </div>
+        <div class="divFootDerecha">
+            <div class="divFootLinks">
+                <h3>Links</h3>
+                <a mat-button [routerLink] = "['/home']" routerLinkActive="active" class="navElement">Inicio</a><br>
+                <a mat-button [routerLink] = "['/Sentimiento']" routerLinkActive="active" class="navElement">Análisis de Sentimiento</a><br>
+                <a mat-button [routerLink] = "['#']" routerLinkActive="active" class="navElement">Quiénes Somos</a>
+            </div>
+
+            <div class="divFootContacto">
+                <h3>Contacto</h3>
+                
+                <div>
+                    <i class="material-icons">phone</i>
+                    <p>+34 638607525</p>
+                </div>
+                
+                <div>
+                    <i class="material-icons">email</i>
+                    <p>tuviajefeliz@gmail.com</p>
+                </div>
+
+                <div>
+                    <i class="material-icons">map</i>
+                    <p>C. Tajo, s/n, 28670 Villaviciosa de Odón, Madrid</p>
+                </div>
+            </div>
+        </div>
+        
     
         <!---
         <div class="foot-id">

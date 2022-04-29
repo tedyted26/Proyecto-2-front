@@ -4,23 +4,26 @@
     
 }
 
+.containerFooter{
+    display: flex;
+    padding: 20px 0px;
+    p{
+        font-size: 20px;
+    }
+}
+
 .divLogoFoot{
     display: inline-block;
     text-align: center;
+    margin-left: 6rem;
 }
 
 #tfoot{
     font-size: 18px;
 }
 
-
-.containerFooter{
-    display: flex;
-    padding: 20px 0px;
-    justify-content: center;
-    p{
-        font-size: 20px;
-    }
+#tfoot{
+    text-align: justify;
 }
 
 #tfoot2{
@@ -37,12 +40,42 @@
     width: 150px;
 }
 
-.foot-id{
-    margin-top: 1%;
-    margin-left: 10%;
-
+.divFootDerecha{
+    display: flex;
+    margin-left: 10rem;
     h3{
         color: #ed9c93ff;
+        text-shadow: 0.5px 0.5px 0.5px white;
+    }
+    margin-top: 2rem;
+}
+
+
+.divFootLinks{
+    display: inline;
+    text-align: center;
+    a{
+        text-decoration: none;
+    }
+}
+
+.navElement {
+    color: white;
+    font-size: 18px;
+    &:hover{
+        text-shadow: 0px 0.5px 0.5px #ed9c93ff;
+    }
+}
+
+.divFootContacto{
+    margin-left: 8rem;
+
+    div{
+        display: flex;
+        p{
+            margin-left: 5px;
+            font-size: 18px;
+        }
     }
 }
 
