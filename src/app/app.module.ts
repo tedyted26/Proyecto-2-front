@@ -17,6 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { RouterModule, Routes } from '@angular/router';
+import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
+import { PaginaError404Component } from './pagina-error404/pagina-error404.component';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { RouterModule, Routes } from '@angular/router';
     WelcomeCardComponent,
     SeccionEquipoComponent,
     TarjetaIntegranteComponent,
-    SentimentAnalysisComponent
+    SentimentAnalysisComponent,
+    QuienesSomosComponent,
+    PaginaError404Component
   ],
   imports: [
     BrowserModule,
