@@ -23,8 +23,14 @@ import { SentimentCardComponent } from './sentiment-card/sentiment-card.componen
 import { SentimentTitleComponent } from './sentiment-title/sentiment-title.component';
 import { NewsCardComponent } from './news-card/news-card.component';
 import { NoticiaCardComponent } from './noticia-card/noticia-card.component';
+<<<<<<< HEAD
 import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
+=======
+import { MenuAdminComponent } from './menu-admin/menu-admin.component';
+import { OpcionesAdminComponent } from './opciones-admin/opciones-admin.component';
+import { EstadAdminComponent } from './estad-admin/estad-admin.component';
+>>>>>>> b8ad584e8579d944a10ca15d142c4a616253e66b
 
 
 @NgModule({
@@ -44,8 +50,14 @@ import { RegistroComponent } from './registro/registro.component';
     SentimentTitleComponent,
     NewsCardComponent,
     NoticiaCardComponent,
+<<<<<<< HEAD
     LoginComponent,
     RegistroComponent
+=======
+    MenuAdminComponent,
+    OpcionesAdminComponent,
+    EstadAdminComponent
+>>>>>>> b8ad584e8579d944a10ca15d142c4a616253e66b
   ],
   imports: [
     BrowserModule,

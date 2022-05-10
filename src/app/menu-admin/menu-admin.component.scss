@@ -1,0 +1,32 @@
+.title_container{
+    background-color: var(--maximum-blue-purple);
+    height: 33rem;
+}
+.img{
+    height: 100%;
+    width: 100%;
+    background-image: url("https://frasesdelavida.com/wp-content/uploads/2019/08/20-Frases-de-Tranquilidad-_-Necesaria-para-nuestro-bienestar.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0% 40%;
+    opacity: 0.7;
+   
+}
+.title{
+    position: absolute;
+    top: 4.75rem;
+    left: 10vw;
+    
+    & h1, h2{
+        color: var(--azul-casi-negro);
+        font-family: serif;
+    }
+    & h1{
+        font-size: 4rem;
+        margin-block: 0;
+    }
+    & h2{
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+}
