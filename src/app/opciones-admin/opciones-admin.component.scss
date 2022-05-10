@@ -1,0 +1,27 @@
+.content_container{
+    margin-block: 4rem;
+    margin-inline: auto;
+    padding-block: 3rem;
+    margin-left: 0%;
+    border-radius: 30px;
+    background: var(--maximum-blue-purple);
+    height: fit-content;
+    color: var(--azul-casi-negro);
+
+    
+
+    hr{
+        height: 2px;
+        width: 80%;
+        margin-inline: auto;
+        background: radial-gradient( black 10%, var(--dark-cornflower-blue) 80%);
+        //background-image: radial-gradient( fadeout(var(--letra), 0%) 40%, fadeout(var(--letra), 100%) 80%);
+    }
+}
+.navElement {
+    color: #35416fff;
+
+    &:hover{
+        text-shadow: 0px 0.5px 0.5px #35416fff;
+    }
+}

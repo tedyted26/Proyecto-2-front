@@ -1,0 +1,43 @@
+.content_container{
+    margin-block: 4rem;
+    margin-inline: auto;
+    padding-block: 3rem;
+    border-radius: 30px;
+    background: rgb(240, 240, 240);
+    height: fit-content;
+    color: var(--azul-casi-negro);
+
+    p{  
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+    }
+
+    h4{
+        font-size: 1.6rem;
+    }
+
+    hr{
+        height: 2px;
+        width: 80%;
+        margin-inline: auto;
+        background: radial-gradient( black 10%, var(--dark-cornflower-blue) 80%);
+        //background-image: radial-gradient( fadeout(var(--letra), 0%) 40%, fadeout(var(--letra), 100%) 80%);
+    }
+
+    & .row{
+        margin-block:3rem;
+        margin-inline: 0;
+        justify-content: space-around;
+
+        & .col-md-2{
+            display: flex;
+            padding-block: 1rem;
+        }
+        button{
+            width: 100px;
+            align-self: center; 
+            margin-inline: auto;  
+        }
+    }
+}
