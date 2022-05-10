@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
-h2{
+h2, h1{
     font-family: 'DM Serif Display', serif;
+}
+p{
+    font-size: 18px;
+    text-align: center;
+    margin: 10px 60px;
 }
 #lista-integrantes{
     //background-color: #35416F;
@@ -18,3 +23,5 @@ h2{
     display: flex;
     justify-content: center;
 }
+
+    
