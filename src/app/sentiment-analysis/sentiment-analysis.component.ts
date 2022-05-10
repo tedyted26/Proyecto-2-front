@@ -10,9 +10,11 @@ import { SentimentAnalysisService } from '../services/sentiment-analysis.service
 export class SentimentAnalysisComponent {
   foto: String = "assets/fotocompu2.png";
   sentimiento: String = "";
+  
+  texto = "";
 
-  onClickSubmit(data: { data: string; }) {
-    this.onGetData(data.data)
+  onClickSubmit() {
+    this.onGetData(this.texto)
  }
 
   constructor(private sentiment: SentimentAnalysisService) {}

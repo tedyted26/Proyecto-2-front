@@ -9,10 +9,10 @@
 <div class="container content_container">
     <h5 class="text-center">Escribe cualquier texto y pulsa el botón</h5>
     <hr>
-    <form #dataFetch="ngForm" (ngSubmit)="onClickSubmit(dataFetch.value)" id="sentimentform">
+    <form #dataFetch="ngForm" (ngSubmit)="onClickSubmit()" id="sentimentform">
         <div class="row row_text">
             <div class="col-md-5">
-                <textarea class = "form-control" rows="6" cols="50"  name = "data"  ngModel form="sentimentform" placeholder="Pj: En Barcelona hay un tráfico terrible"></textarea>
+                <textarea class = "form-control" rows="6" cols="50"  name = "data"  [(ngModel)]="texto" form="sentimentform" placeholder="Pj: En Barcelona hay un tráfico terrible"></textarea>
             </div>
             <div class="col-md-2 text-center">
                 <button  type ="submit" class="btn btn-primary">Analizar</button>
