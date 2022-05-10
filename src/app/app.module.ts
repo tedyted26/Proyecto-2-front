@@ -21,6 +21,8 @@ import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { PaginaError404Component } from './pagina-error404/pagina-error404.component';
 import { SentimentCardComponent } from './sentiment-card/sentiment-card.component';
 import { SentimentTitleComponent } from './sentiment-title/sentiment-title.component';
+import { NewsCardComponent } from './news-card/news-card.component';
+import { NoticiaCardComponent } from './noticia-card/noticia-card.component';
 
 
 @NgModule({
@@ -37,7 +39,9 @@ import { SentimentTitleComponent } from './sentiment-title/sentiment-title.compo
     QuienesSomosComponent,
     PaginaError404Component,
     SentimentCardComponent,
-    SentimentTitleComponent
+    SentimentTitleComponent,
+    NewsCardComponent,
+    NoticiaCardComponent
   ],
   imports: [
     BrowserModule,
