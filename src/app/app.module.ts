@@ -23,6 +23,8 @@ import { SentimentCardComponent } from './sentiment-card/sentiment-card.componen
 import { SentimentTitleComponent } from './sentiment-title/sentiment-title.component';
 import { NewsCardComponent } from './news-card/news-card.component';
 import { NoticiaCardComponent } from './noticia-card/noticia-card.component';
+import { LoginComponent } from './login/login.component';
+import { RegistroComponent } from './registro/registro.component';
 
 
 @NgModule({
@@ -41,7 +43,9 @@ import { NoticiaCardComponent } from './noticia-card/noticia-card.component';
     SentimentCardComponent,
     SentimentTitleComponent,
     NewsCardComponent,
-    NoticiaCardComponent
+    NoticiaCardComponent,
+    LoginComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
