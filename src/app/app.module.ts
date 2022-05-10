@@ -19,6 +19,8 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { PaginaError404Component } from './pagina-error404/pagina-error404.component';
+import { SentimentCardComponent } from './sentiment-card/sentiment-card.component';
+import { SentimentTitleComponent } from './sentiment-title/sentiment-title.component';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import { PaginaError404Component } from './pagina-error404/pagina-error404.compo
     TarjetaIntegranteComponent,
     SentimentAnalysisComponent,
     QuienesSomosComponent,
-    PaginaError404Component
+    PaginaError404Component,
+    SentimentCardComponent,
+    SentimentTitleComponent
   ],
   imports: [
     BrowserModule,
