@@ -1,0 +1,22 @@
+<div class="main-card">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-sm-12">
+                <h3><p>Noticias</p></h3>
+                <div class="row justify-content-center">
+                    <div class="col-md-4 col-sm-12">
+                        <div class="grafico-tarta">
+                            Aqui un grafico de tarta
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-sm-12">
+                        <ul class="list-group list-group-flush">
+                            <li *ngFor="let c of news_model; let i = index" class="list-group-item list-group-item:hover" (click)="abrirEnlaceNoticia(c.url)">
+                                <app-noticia-card [noticia]="c"></app-noticia-card>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</div>

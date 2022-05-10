@@ -1,0 +1,21 @@
+p{
+    color: var(--dark-cornflower-blue);
+}
+li{
+    
+}
+
+.list-group-item{
+    margin-bottom: 1rem;
+    list-style-type: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.list-group-item:hover{
+
+    background-color: var(--banana-mania);
+    box-shadow: 5px 6px 6px 2px #e9ecef;
+    transform: scale(1.05);
+}
