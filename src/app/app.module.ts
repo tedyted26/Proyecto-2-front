@@ -30,6 +30,7 @@ import { RegistroComponent } from './registro/registro.component';
 import { MenuAdminComponent } from './menu-admin/menu-admin.component';
 import { OpcionesAdminComponent } from './opciones-admin/opciones-admin.component';
 import { EstadAdminComponent } from './estad-admin/estad-admin.component';
+import { SentimentHelpComponent } from './sentiment-help/sentiment-help.component';
 
 
 
@@ -56,7 +57,8 @@ import { EstadAdminComponent } from './estad-admin/estad-admin.component';
 
     MenuAdminComponent,
     OpcionesAdminComponent,
-    EstadAdminComponent
+    EstadAdminComponent,
+    SentimentHelpComponent
   ],
   imports: [
     BrowserModule,

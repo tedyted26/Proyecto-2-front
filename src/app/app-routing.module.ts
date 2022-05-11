@@ -11,7 +11,6 @@ import { RegistroComponent } from './registro/registro.component';
 import { SentimentAnalysisComponent } from './sentiment-analysis/sentiment-analysis.component';
 
 const routes: Routes = [
-  {path: "", pathMatch: "full", redirectTo: "Login"},
    { path: 'home', component: FrameCentralComponent},
    { path: 'Sentimiento', component: SentimentAnalysisComponent},
    { path: 'QuienesSomos', component: QuienesSomosComponent},
