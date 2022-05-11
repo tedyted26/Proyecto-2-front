@@ -15,6 +15,13 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
+  display = false;
+  onPress() {
+    this.display = true;
+    /*if you want the component to show and hide on click pressed, use 
+    use this line
+    this.display = !this.display;*/
+  }
   
   
   

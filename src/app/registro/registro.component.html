@@ -1,0 +1,91 @@
+
+<router-outlet> 
+    <head>
+
+    </head>
+<div class="container-fluid">
+
+    <div class="row vh-100 justify-content-center align-items-center" style="background-color: antiquewhite;">
+        <div class="col-xxl-4 col-xl-5 col-lg-5" style="text-align: center;">
+            <img class="img-fluid logo-responsive" src="" alt="">
+        </div>
+
+        <div class="col-xxl-3 col-xl-4 col-lg-5 card rounded-0 card-form" style="background-color: #deab90;">
+            <div class="card-header bg-transparent border-0" style="text-align: center">
+                <h1 class="h4 mb-3">Bienvenido/a viajero!</h1>
+                <h3 class="h4 mb-3">Inicia sesion de manera <strong> segura🔒!</strong></h3>
+                <a rel="noreferrer noopener nofollow" target="_blank" href="https://www.instagram.com/"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a rel="noreferrer noopener nofollow" target="_blank" href="https://www.twitter.com/"><i
+                        class="fa-brands fa-twitter px-3"></i></a>
+                <a rel="noreferrer noopener nofollow" target="_blank" href="https://www.linkedin.com/"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a rel="noreferrer noopener nofollow" target="_blank" href="https://www.facebook.com/"><i
+                        class="fa-brands fa-facebook-f px-3"></i></a>
+                <a rel="noreferrer noopener nofollow" target="_blank" href="https://www.youtube.com/"><i
+                        class="fa-brands fa-youtube"></i></a>
+            </div>
+
+            <div class="card-body" >
+                <form id="form" method="post" action="">
+
+                    <div class="form-floating form-group mb-3">
+                        <input class="form-control" type="text" name="username" id="" placeholder="Usuario" required>
+                        <label for="" style="padding-left: 15px"> Usuario</label>
+                    </div>
+                    <div class="form-floating form-group mb-3">
+                        <input class="form-control" type="password" name="password" id="" placeholder="Contraseña"
+                            required>
+                        <label for="" style="padding-left: 15px"> Contraseña</label>
+                    </div>
+                    <div class="form-floating form-group mb-3">
+                        <input class="form-control" type="password" name="password" id="" placeholder="Contraseña"
+                            required>
+                        <label for="" style="padding-left: 15px">Repetir Contraseña</label>
+                    </div>
+                    <div class="form-group form-switch mb-3" style="text-align: right">
+                        <label for="id_showPassword" class="me-5"> Mostrar contraseña</label>
+                        <input class="form-check-input" type="checkbox" role="switch" id="id_showPassword">
+                    </div>
+                    <div class="form-group mb-3" style="text-align: right">
+                        <h6> tienes cuenta ?<a href="" mat-button [routerLink]="['/Login']" routerLinkActive="active" class="form-check-label">inicia sesion <i class="fa-solid fa-arrow-right-long"></i></a></h6>
+                    </div>
+                    <div class="col-12" style="text-align: right">
+                        <input type="hidden" name="next" value="">
+                        <a mat-button [routerLink]="['/Login']" routerLinkActive="active" class="btn btn-dark" style="width: 100%;">Crear Cuenta</a>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer bg-transparent mt-5 mb-2 border-0 fa-sans">
+                <div class="d-flex justify-content-center mt-5">
+                    <small>Visita nuestra página web <a rel="noopener nofollow" target="_blank"
+                            href="#">www.viajeroXelmundo.co</a>.</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    window.onload = () => {
+        document.getElementById("id_showPassword").addEventListener('click', () => {
+            let password = document.getElementById("id_password");
+            if (password.type === "password") {
+                password.type = "text";
+            } else {
+                password.type = "password";
+            }
+        })
+
+        document.getElementById("buttonSubmit").addEventListener('click', (e) => {
+            e.preventDefault();
+            document.getElementById("id_password").type = "password";
+            if (document.getElementById("id_password").value != "" && document.getElementById("id_username").value != "") {
+                document.getElementById("form").submit();
+            }
+        })
+    }
+</script>
+
+</router-outlet>
