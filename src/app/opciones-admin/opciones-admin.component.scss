@@ -11,11 +11,8 @@
     
 
     hr{
-        height: 2px;
-        width: 80%;
-        margin-inline: auto;
-        background: radial-gradient( black 10%, var(--dark-cornflower-blue) 80%);
-        //background-image: radial-gradient( fadeout(var(--letra), 0%) 40%, fadeout(var(--letra), 100%) 80%);
+        border-top: 0.1vw solid var(--azul-casi-negro);
+        border-radius: 5px;
     }
 }
 .navElement {
