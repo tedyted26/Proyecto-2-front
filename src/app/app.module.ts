@@ -31,6 +31,7 @@ import { MenuAdminComponent } from './menu-admin/menu-admin.component';
 import { OpcionesAdminComponent } from './opciones-admin/opciones-admin.component';
 import { EstadAdminComponent } from './estad-admin/estad-admin.component';
 import { SentimentHelpComponent } from './sentiment-help/sentiment-help.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -67,6 +68,7 @@ import { SentimentHelpComponent } from './sentiment-help/sentiment-help.componen
     MatButtonModule,
     FormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
 
   ],
   providers: [],
