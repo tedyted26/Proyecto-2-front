@@ -1,14 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 .tweets-analysis{
     height: fit-content;
-    margin-block: 4rem;
+    margin-block: 3rem;
     margin-inline: auto;
     padding-inline: 5rem;
-    padding-block: 3rem;
-    border-radius: 30px;
-    background: #bad7ff;
-    height: fit-content;
+    padding-block: 4rem;
+    background: var(--vivid-tangerine);
     color: var(--azul-casi-negro);
 }
 .row{
     height: 100%;
+    background-color: transparent;
 }
+.big-text{
+    font-size: 4rem;
+    font-family: 'DM Serif Display', serif;
+    color: white;
+}
+.med-text{
+    font-size: 1.5rem;
+    font-family: 'DM Serif Display', serif;
+    color: white;
+}
+#text_search{
+    font-family: 'DM Serif Display', serif;
+    color: white;
+    font-size: 3rem;
+}
+
