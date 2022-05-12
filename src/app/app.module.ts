@@ -33,6 +33,11 @@ import { EstadAdminComponent } from './estad-admin/estad-admin.component';
 import { SentimentHelpComponent } from './sentiment-help/sentiment-help.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+
 
 
 @NgModule({
@@ -69,6 +74,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    MatAutocompleteModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule
 
   ],
   providers: [],
