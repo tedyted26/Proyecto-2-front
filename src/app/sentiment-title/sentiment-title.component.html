@@ -7,22 +7,21 @@
             <form>
                 <div class="input-group mb-3">
                     <mat-form-field>
-                        <input type="text" matInput [formControl]="control" [matAutocomplete]="auto" class="form-control" placeholder="Busca tu destino..." aria-label="Busqueda de destino" aria-describedby="basic-addon2">
+                        <input type="text" matInput [formControl]="control" [matAutocomplete]="auto" class="form-control" aria-label="Busqueda de destino" aria-describedby="basic-addon2">
 
                         <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
                             <mat-option *ngFor="let color of filArray | async" [value] = "color">
                                 {{color}}
                             </mat-option>
                         </mat-autocomplete>
-                        
                     </mat-form-field>
                 
                 </div>                   
-                <div class="input-group-append">
-                    <button class="btn btn-primary" type="button">Buscar</button>
-                </div>
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="button">Buscar</button>
+                    </div>
             </form>
-            <p>¿No sabes lo que es el análisis de sentimiento? <a class = "badge badge-primary" href="#">Te lo explicamos</a></p>
         </div>
+        <p>¿No sabes lo que es el análisis de sentimiento? <a class = "badge badge-primary" href="#">Te lo explicamos</a></p>
     </div> 
 </div>

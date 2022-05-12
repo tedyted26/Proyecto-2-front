@@ -42,6 +42,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 5rem;
+    display: inline-flex;
 }
 
 a{
@@ -58,4 +59,19 @@ input:focus{
 
 button{
     box-shadow: none;
+    height: 2.3rem;
+    
+}
+
+mat-form-field{
+    width: 87.5%;
+    background-color: white;
+    border-radius: 0.25rem;
+    height: 2.3rem;
+    margin-block: auto;
+    margin-inline: auto;
+
+}
+form{
+    width: 100%;
 }
