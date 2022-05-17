@@ -4,8 +4,8 @@
         <h2>Análisis de sentimiento</h2>
         <h3>La nueva forma de disfrutar de tus vacaciones</h3>
         <div class="searchbar">
-            <form>
-                <div class="input-group mb-3">
+            <form class="row mb-3">
+                <div  class="col-md-11">
                     <mat-form-field>
                         <input type="text" matInput [formControl]="control" [matAutocomplete]="auto" class="form-control" aria-label="Busqueda de destino" aria-describedby="basic-addon2">
 
@@ -17,7 +17,7 @@
                     </mat-form-field>
                 
                 </div>                   
-                    <div class="input-group-append">
+                    <div class="col-md-1">
                       <button class="btn btn-primary" type="button">Buscar</button>
                     </div>
             </form>

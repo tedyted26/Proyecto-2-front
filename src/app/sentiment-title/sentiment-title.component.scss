@@ -41,8 +41,7 @@
     font-weight: normal;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5rem;
-    display: inline-flex;
+    margin-top: 4rem;
 }
 
 a{
@@ -50,11 +49,11 @@ a{
 }
 
 input{
-    margin-right: 0.5px;
-}
-input:focus{
-    box-shadow: 2px 2px 2px 1px rgba(32, 21, 64, 0.2);
-    border-color: none;
+    height: 2.3rem;
+    &:focus{
+        box-shadow: none;
+        border-color: none;
+    }
 }
 
 button{
@@ -64,14 +63,26 @@ button{
 }
 
 mat-form-field{
-    width: 87.5%;
+    width: 100%;
     background-color: white;
+    padding-inline: 0.8rem;
     border-radius: 0.25rem;
     height: 2.3rem;
-    margin-block: auto;
-    margin-inline: auto;
-
+    &:hover{
+        box-shadow: 2px 2px 2px 1px rgba(32, 21, 64, 0.2);
+        border-color: black;
+    }
 }
 form{
-    width: 100%;
+    width: 80%;
+    margin-inline: auto;
+    justify-content: space-around;
+    & .col-md-11, .col-md-1{
+        padding-inline: 0;
+        margin-top: 1rem;
+    }
+}
+
+.mat-autocomplete-panel.mat-autocomplete-panel.cdk-overlay-container{
+    visibility: visible;
 }
