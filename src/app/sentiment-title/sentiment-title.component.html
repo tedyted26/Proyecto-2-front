@@ -5,27 +5,28 @@
         <h3>La nueva forma de disfrutar de tus vacaciones</h3>
         <div class="searchbar">
             <form class="row mb-3">
-                <div  class="col-md-11">
+                <div  class="col-md-11" matAutocompleteOrigin #origin="matAutocompleteOrigin">
+
                     <mat-form-field>
                         <input type="text" 
                         matInput 
                         [formControl]="control" 
                         [matAutocomplete]="auto" 
+                        [matAutocompleteConnectedTo]="origin"
                         class="form-control" aria-label="Busqueda de destino" aria-describedby="basic-addon2">
-
-                        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-                            <mat-option *ngFor="let color of filArray | async" [value] = "color">
-                                {{color}}
-                            </mat-option>
-                        </mat-autocomplete>
-                    </mat-form-field>
+                    </mat-form-field>     
                 
-                </div>                   
-                    <div class="col-md-1">
-                      <button class="btn btn-primary" type="button">Buscar</button>
-                    </div>
+                </div>
+                <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                    <mat-option *ngFor="let color of filArray | async" [value] = "color">
+                        {{color}}
+                    </mat-option>
+                </mat-autocomplete>                  
+                <div class="col-md-1">
+                    <button class="btn btn-primary" type="button">Buscar</button>
+                </div>
             </form>
-        </div>
+        </div>   
         <p>¿No sabes lo que es el análisis de sentimiento? <a class = "badge badge-primary" href="#">Te lo explicamos</a></p>
     </div> 
 </div>
