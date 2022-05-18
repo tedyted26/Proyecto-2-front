@@ -11,6 +11,7 @@ import { RegistroComponent } from './registro/registro.component';
 import { SentimentAnalysisComponent } from './sentiment-analysis/sentiment-analysis.component';
 
 const routes: Routes = [
+   { path: '', redirectTo: 'home', pathMatch: 'full'},
    { path: 'home', component: FrameCentralComponent},
    { path: 'Sentimiento', component: SentimentAnalysisComponent},
    { path: 'QuienesSomos', component: QuienesSomosComponent},
@@ -20,6 +21,7 @@ const routes: Routes = [
    { path: 'Registro', component: RegistroComponent},
 
    { path: 'Admin', component: MenuAdminComponent},
+   { path: '**', redirectTo: 'Error', pathMatch: 'full'},
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
