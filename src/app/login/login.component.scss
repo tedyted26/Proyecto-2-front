@@ -1,0 +1,62 @@
+/*LOGIN*/
+*{
+    font-family: 'DM Serif Display', serif;
+}
+.container-reg{
+    background-color: var(--fondo);
+    padding: 70px;
+}
+
+.recuadro{
+    width: 50%;
+    text-align: center;
+    margin-inline: auto;
+    border: 1px solid black;
+    background-color: var(--banana-mania);
+    padding: 50px;
+}
+
+.h1logreg{
+    font-family: 'DM Serif Display', serif;
+    text-align: center;
+    font-size: 28px;
+    color: var(--dark-cornflower-blue);
+    font-weight: 700;
+}
+.logologin{
+    width: 400px;
+    margin-top: 60px;
+    left: 50%;
+    width: 350px;
+}
+input[type=text], input[type=email], input[type=password]{
+    width: 85%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+input[type=submit]{
+    width: 85%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: var(--dark-cornflower-blue);
+    font-size: 17px;
+    font-weight: 700;
+    color: white;
+}
+.linkReg{
+    text-decoration: none;
+    color: var(--vivid-tangerine);
+    font-weight: 600;
+    &:hover{
+        color: var(--dark-cornflower-blue)
+    }
+}
