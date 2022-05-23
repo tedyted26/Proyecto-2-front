@@ -11,8 +11,8 @@
     width: 50%;
     text-align: center;
     margin-inline: auto;
-    border: 1px solid black;
-    background-color: var(--banana-mania);
+    border: 1px solid var(--dark-cornflower-blue);
+    background-color: var(--maximum-blue-purple);
     padding: 50px;
 }
 
@@ -22,6 +22,7 @@
     font-size: 28px;
     color: var(--dark-cornflower-blue);
     font-weight: 700;
+    
 }
 .logologin{
     width: 400px;
@@ -49,14 +50,18 @@ input[type=submit]{
     box-sizing: border-box;
     background-color: var(--dark-cornflower-blue);
     font-size: 17px;
-    font-weight: 700;
+    font-weight: 300;
     color: white;
+    &:hover{
+        background-color: rgb(67, 82, 141);
+    }
 }
 .linkReg{
     text-decoration: none;
-    color: var(--vivid-tangerine);
+    color: var(--dark-cornflower-blue);
     font-weight: 600;
     &:hover{
-        color: var(--dark-cornflower-blue)
+        
+        text-shadow: 1px 1px white;
     }
 }
