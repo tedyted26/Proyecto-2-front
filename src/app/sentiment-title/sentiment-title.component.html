@@ -8,7 +8,7 @@
                 <div  class="col-md-11" matAutocompleteOrigin #origin="matAutocompleteOrigin">
 
                     <mat-form-field>
-                        <input type="text" 
+                        <input type="text"
                         matInput 
                         [formControl]="control" 
                         [matAutocomplete]="auto" 
@@ -23,7 +23,7 @@
                     </mat-option>
                 </mat-autocomplete>                  
                 <div class="col-md-1">
-                    <button class="btn btn-primary" type="button">Buscar</button>
+                    <button class="btn btn-primary" type="button" (click)="analizarPueblo()">Buscar</button>
                 </div>
             </form>
         </div>   
