@@ -1,29 +1,27 @@
 .foot{
     background-color: rgb(46, 41, 41);
     color: white;
-    
+    text-align: center;
 }
 
 .containerFooter{
     display: flex;
-    padding: 20px 0px;
+    padding: 20px 20px;
     p{
         font-size: 20px;
+        text-align: center;
     }
 }
 
 .divLogoFoot{
     display: inline-block;
     text-align: center;
-    margin-left: 6rem;
+    
 }
 
 #tfoot{
     font-size: 18px;
-}
-
-#tfoot{
-    text-align: justify;
+    text-align: center;
 }
 
 #tfoot2{
@@ -40,20 +38,17 @@
     width: 150px;
 }
 
-.divFootDerecha{
-    display: flex;
-    margin-left: 10rem;
+.divFootMedio{
+    margin-left: 8rem;
+    text-align: center;
+    
     h3{
         color: #ed9c93ff;
         text-shadow: 0.5px 0.5px 0.5px white;
     }
     margin-top: 2rem;
-}
-
-
-.divFootLinks{
     display: inline;
-    text-align: center;
+    
     a{
         text-decoration: none;
     }
@@ -68,16 +63,22 @@
 }
 
 .divFootContacto{
+    h3{
+        color: #ed9c93ff;
+        text-shadow: 0.5px 0.5px 0.5px white;
+    }
+    margin-top: 2rem;
     margin-left: 8rem;
-
+    display: inline;
+    
     div{
         display: flex;
+        margin-left: 7rem;
+
         p{
             margin-left: 5px;
             font-size: 18px;
         }
     }
 }
-
-
 
