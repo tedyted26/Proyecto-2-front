@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter  } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith, debounceTime } from 'rxjs/operators';
@@ -14,10 +14,14 @@ import { Data } from '@angular/router';
 export class SentimentTitleComponent implements OnInit {
 
   array_prueba: string[] = ['White', 'Black', 'Green', 'Blue', 'Yellow', 'Red'];
-  puebloSeleccionado = "Kimtone"
-  respuesta = ""
+  puebloSeleccionado = "West Josianne"
+
   control = new FormControl();
   filArray!: Observable<string[]>;
+
+  @Output() messageEvent = new EventEmitter<Data>();
+  data_busqueda: Data;
+  n_tweets_analizados = "";
 
   constructor(private sentiment: SentimentAnalysisService) {}
 
@@ -41,8 +45,11 @@ export class SentimentTitleComponent implements OnInit {
   analizarPueblo(){
     console.log("ANALIZANDO")
     this.sentiment.getDataFromBackend(this.puebloSeleccionado).subscribe(
-      (response:Data) => {
-        this.respuesta = response["type_text"];
+      (response: Data) => {
+        this.data_busqueda = response;
+        this.n_tweets_analizados = response["twitter"]["numero_tweets"];
+
+        this.messageEvent.emit(this.data_busqueda)
         console.log(response)
       },
       (error:any) => console.log(error),

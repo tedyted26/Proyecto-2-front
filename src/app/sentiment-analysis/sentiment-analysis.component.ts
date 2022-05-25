@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Data } from '@angular/router';
+
 import { SentimentAnalysisService } from '../services/sentiment-analysis.service';
 @Component({
   selector: 'app-sentiment-analysis',
@@ -7,27 +8,22 @@ import { SentimentAnalysisService } from '../services/sentiment-analysis.service
   styleUrls: ['./sentiment-analysis.component.scss']
 })
 
-export class SentimentAnalysisComponent {
+export class SentimentAnalysisComponent{
   foto: String = "assets/fotocompu2.png";
   sentimiento: String = "";
   
-  texto = "";
-
-  onClickSubmit() {
-    this.onGetData(this.texto)
- }
+  data_busqueda: Data;
 
   constructor(private sentiment: SentimentAnalysisService) {}
+
   ngOnInit(): void{ 
   }
   
-  onGetData(text: String): void{
-    this.sentiment.getDataFromBackend(text).subscribe(
-      (response:Data) => this.sentimiento = response["type_text"],
-      (error:any) => console.log(error),
-      () => console.log("Se ha terminado el proceso")
-    );
-    
+  //Recibe los datos de la consulta al back, de parte del componente hijo
+  receiveMessage($event: Data) {
+    console.log("MENSAJE RECIBIDO")
+    console.log($event)
+    this.data_busqueda = $event
   }
 
 }

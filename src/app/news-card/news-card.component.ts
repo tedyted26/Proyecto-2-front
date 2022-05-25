@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, SimpleChange } from '@angular/core';
+import { Data } from '@angular/router';
 import { CardNoticiaModel } from '../modelos/card-noticia-model';
 
 @Component({
@@ -13,6 +14,10 @@ export class NewsCardComponent implements OnInit {
   new CardNoticiaModel("1","http:...", "Titulo 2", "El subtitulo menos impresionante", "11/12/2022", "222"),
   new CardNoticiaModel("1","http:...", "Titulo 2", "El subtitulo menos impresionante", "11/12/2022", "222")
 ];
+
+  @Input()
+  data_busqueda: Data;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -20,6 +25,27 @@ export class NewsCardComponent implements OnInit {
 
   abrirEnlaceNoticia(i: String): void{
     window.open(i.toString(), "_blank");
+  }
+
+  ngOnChanges(changes: { [property: string]: SimpleChange }){
+    // Extract changes to the input property by its name
+    for (let propName in changes) {
+      let change: SimpleChange = changes[propName];
+      let curVal  = JSON.stringify(change["currentValue"]);
+      this.data_busqueda = JSON.parse( curVal);
+
+
+      this.data_busqueda["noticias"].forEach((n: { [x: string]: String; }) => {
+        
+        let tmp_model = new CardNoticiaModel(n["id"],n["url"], n["titulo"], n["subtitulo"], n["fecha_noticia"], "222");
+        this.news_model.push(tmp_model)
+        console.log(n)
+        console.log(tmp_model)
+        console.log(this.news_model)
+      });
+      
+      console.log(this.data_busqueda)
+    }
   }
 
 }

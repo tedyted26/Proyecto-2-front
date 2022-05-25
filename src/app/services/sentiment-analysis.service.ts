@@ -5,14 +5,18 @@ import { Data } from '../data';
 
 
 
+
 @Injectable({ providedIn: 'root' })
 export class SentimentAnalysisService {
 
+  data_observable: Observable<Data>;
+  
   constructor(private http: HttpClient) {}
 
   getDataFromBackend(text:String): Observable<Data> {
-     return this.http.post<Data>("http://127.0.0.1:8000/api/busquedas", {texto: text})
-   }
+      this.data_observable = this.http.post<Data>("http://127.0.0.1:8000/api/busquedas", {texto: text});
+      return this.data_observable;
+  }
 
 }
 

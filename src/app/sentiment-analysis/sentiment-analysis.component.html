@@ -1,6 +1,6 @@
-<app-sentiment-title></app-sentiment-title>
-<app-sentiment-card></app-sentiment-card>
-<app-news-card></app-news-card>
+<app-sentiment-title (messageEvent)="receiveMessage($event)"></app-sentiment-title>
+<app-sentiment-card [data_busqueda] = "data_busqueda"></app-sentiment-card>
+<app-news-card [data_busqueda] = "data_busqueda"></app-news-card>
 <div class="container info">
     <h3>¿Sabias que...?</h3>
     <p>Melilla, País Vasco y Navarra son las comunidades españolas con mayor tasa de delitos de odio al año por cada 100 000 habitantes.
