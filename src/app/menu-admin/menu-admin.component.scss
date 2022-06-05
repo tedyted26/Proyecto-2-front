@@ -5,7 +5,7 @@
 .img{
     height: 100%;
     width: 100%;
-    background-image: url("https://frasesdelavida.com/wp-content/uploads/2019/08/20-Frases-de-Tranquilidad-_-Necesaria-para-nuestro-bienestar.jpg");
+    background-image: url("https://wallup.net/wp-content/uploads/2016/04/06/343170-landscape-nature.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0% 40%;
@@ -14,19 +14,21 @@
 }
 .title{
     position: absolute;
-    top: 4.75rem;
-    left: 10vw;
-    
-    & h1, h2{
-        color: var(--azul-casi-negro);
-        font-family: serif;
-    }
-    & h1{
+    width: 100%;
+    text-align: center;
+    color: var(--azul-casi-negro);
+    top: 16rem;
+    & h2 {
         font-size: 4rem;
-        margin-block: 0;
+        font-family: 'DM Serif Display', serif;
+        font-family: 'Oleo Script Swash Caps', cursive;
+        //font-weight: bold;
     }
-    & h2{
-        font-size: 2rem;
+    & h3{
+        font-size: 1.7rem;
         margin-top: 1rem;
+        font-family: 'DM Serif Display', serif;
+        font-family: 'Oleo Script Swash Caps', cursive;
+        //font-weight: bold;
     }
 }
