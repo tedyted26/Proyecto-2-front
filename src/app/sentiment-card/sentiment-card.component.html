@@ -18,9 +18,11 @@
                             <h3 class="fw-bold">Polaridad</h3>
                             <p class="text-muted mb-0">Indica si el resultado del análisis es positivo, negativo o neutro.</p>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 grafica">
                             aqui va grafica {{data_busqueda["twitter"]["polaridad"]}}
-                            <canvas id="pieChartPolaridad"></canvas>
+                            <div>
+                            <canvas class="chart chart-bar" id="pieChartPolaridad">{{myChart}}</canvas>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -36,7 +38,7 @@
                         </div>
                         <div class="col-md-6">
                             aqui va grafica {{data_busqueda["twitter"]["subjetividad"]}}
-                            <canvas id="pieChartPolaridad"></canvas>
+                            <canvas id="pieChartSubjetividad"></canvas>
                         </div>
                     </div>
                 </div>
