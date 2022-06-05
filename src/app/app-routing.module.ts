@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ConfigAdminComponent } from './config-admin/config-admin.component';
+import { EstadAdminComponent } from './estad-admin/estad-admin.component';
 import { FrameCentralComponent } from './frame-central/frame-central.component';
 
 import { LoginComponent } from './login/login.component';
 
 import { MenuAdminComponent } from './menu-admin/menu-admin.component';
+import { OpcionesCuentaAdminComponent } from './opciones-cuenta-admin/opciones-cuenta-admin.component';
 import { PaginaError404Component } from './pagina-error404/pagina-error404.component';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { RegistroComponent } from './registro/registro.component';
@@ -18,10 +21,17 @@ const routes: Routes = [
    { path: 'Error', component: PaginaError404Component},
 
    { path: 'Login', component: LoginComponent},
-   { path: 'Registro', component: RegistroComponent},
 
-   { path: 'Admin', component: MenuAdminComponent},
+   { path: 'Admin', component: MenuAdminComponent, children: [
+    { path: "", outlet: "opcionesAdmin", component: ConfigAdminComponent},
+    { path: "Configuracion", outlet: "opcionesAdmin", component: ConfigAdminComponent},
+    { path: "Estadisticas", outlet: "opcionesAdmin", component: EstadAdminComponent},
+    { path: "RegistrarAdmin", outlet: "opcionesAdmin", component: RegistroComponent},
+    { path: "OpcionesCuenta", outlet: "opcionesAdmin", component: OpcionesCuentaAdminComponent},
+   ]},
    { path: '**', redirectTo: 'Error', pathMatch: 'full'},
+
+   
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

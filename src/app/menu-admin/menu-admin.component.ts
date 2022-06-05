@@ -8,9 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class MenuAdminComponent implements OnInit {
 
   constructor() { }
-  displayConfig = false;
-  displayEstad = true;
-  displayInfo = false;
+
   ngOnInit(): void {
   }
 

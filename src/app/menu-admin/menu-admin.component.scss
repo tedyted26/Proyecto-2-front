@@ -32,3 +32,13 @@
         //font-weight: bold;
     }
 }
+.container{
+    margin-block: 3rem;
+    padding-block: 3rem;
+    padding-inline: 3rem;
+    border-radius: 10px;
+    background: rgb(240, 240, 240);
+    min-height: 50vh;
+    height: fit-content;
+    color: var(--azul-casi-negro);
+}
