@@ -32,17 +32,21 @@ export class NewsCardComponent implements OnInit {
     for (let propName in changes) {
       let change: SimpleChange = changes[propName];
       let curVal  = JSON.stringify(change["currentValue"]);
-      this.data_busqueda = JSON.parse( curVal);
+
+      if (curVal){
+        this.data_busqueda = JSON.parse( curVal);
+        this.data_busqueda = JSON.parse( curVal);
+
+        this.news_model = []
+        this.data_busqueda["noticias"].forEach((n: { [x: string]: String; }) => {
+          
+          let tmp_model = new CardNoticiaModel(n["id"],n["url"], n["titulo"], n["subtitulo"], n["fecha_noticia"], "222");
+          this.news_model.push(tmp_model)
+        });
 
 
-      this.data_busqueda["noticias"].forEach((n: { [x: string]: String; }) => {
-        
-        let tmp_model = new CardNoticiaModel(n["id"],n["url"], n["titulo"], n["subtitulo"], n["fecha_noticia"], "222");
-        this.news_model.push(tmp_model)
-        console.log(n)
-        console.log(tmp_model)
-        console.log(this.news_model)
-      });
+      }else{ console.log("Valor indefinido")}
+
       
       console.log(this.data_busqueda)
     }
