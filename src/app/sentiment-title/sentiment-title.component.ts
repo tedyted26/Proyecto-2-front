@@ -6,6 +6,9 @@ import { map, startWith, debounceTime } from 'rxjs/operators';
 import { SentimentAnalysisService } from '../services/sentiment-analysis.service';
 import { Data } from '@angular/router';
 
+import { HttpClient } from '@angular/common/http';
+
+
 @Component({
   selector: 'app-sentiment-title',
   templateUrl: './sentiment-title.component.html',
@@ -13,7 +16,13 @@ import { Data } from '@angular/router';
 })
 export class SentimentTitleComponent implements OnInit {
 
-  array_prueba: string[] = ['White', 'Black', 'Green', 'Blue', 'Yellow', 'Red'];
+  array_prueba: string[] = ["A Coruña","Albacete","Alicante","Almería",
+  "Asturias","Álava","Ávila","Badajoz","Baleares","Barcelona","Burgos","Cantabria",
+  "Castellón","Ceuta","Ciudad Real","Cuenca","Cáceres","Cádiz",
+  "Córdoba","Girona","Granada","Guadalajara","Guipúzcoa","Huelva","Huesca","Jaén",
+  "La Rioja","Las Palmas","León","Lleida","Lugo","Madrid","Melilla","Murcia","Málaga",
+  "Navarra","Ourense","Palencia","Pontevedra","SC. Tenerife","Salamanca","Segovia","Sevilla",
+  "Soria","Tarragona","Teruel","Toledo","Valencia","Valladolid","Vizcaya","Zamora","Zaragoza"];
   puebloSeleccionado = "West Josianne"
 
   control = new FormControl();
@@ -23,9 +32,19 @@ export class SentimentTitleComponent implements OnInit {
   data_busqueda: Data;
   n_tweets_analizados = "";
 
-  constructor(private sentiment: SentimentAnalysisService) {}
+  private txtURL = 'test.txt';
+  constructor(private sentiment: SentimentAnalysisService, private http: HttpClient) {
+    this.getJSON().subscribe(data => {
+      console.log("PUEBLOS:")
+      console.log(data);
+     });
+  }
+  public getJSON(): Observable<any> {
+    return this.http.get(this.txtURL);
+  }
 
   ngOnInit(): void {
+
     //o aqui (api)
     this.filArray = this.control.valueChanges.pipe(
       debounceTime(500),
@@ -57,6 +76,5 @@ export class SentimentTitleComponent implements OnInit {
     );
   }
 
-  
 
 }
