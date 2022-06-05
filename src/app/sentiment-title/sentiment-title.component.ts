@@ -6,7 +6,6 @@ import { map, startWith, debounceTime } from 'rxjs/operators';
 import { SentimentAnalysisService } from '../services/sentiment-analysis.service';
 import { Data } from '@angular/router';
 
-import { HttpClient } from '@angular/common/http';
 
 /**
  * Componente encargado de la busqueda de las provincias,
