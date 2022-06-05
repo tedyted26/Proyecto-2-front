@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, SimpleChange } from '@angular/core';
 import { Data } from '@angular/router';
 import { CardNoticiaModel } from '../modelos/card-noticia-model';
+import {Chart, registerables} from 'chart.js';
 
 @Component({
   selector: 'app-news-card',
@@ -17,10 +18,17 @@ export class NewsCardComponent implements OnInit {
 
   @Input()
   data_busqueda: Data;
+  
+  //DATOS DEL CHART
+  dataNoticias = [20, 80];
+  backgroundColorNoticias = ['rgba(255, 99, 132, 0.5)', 'rgba(54, 162, 235, 0.7)'];
+  borderColorNoticias = ['rgba(255, 99, 132, 0.8)', 'rgba(54, 162, 235)'];
 
   constructor() { }
 
   ngOnInit(): void {
+    Chart.register(...registerables);
+    this.createChart("pieChartNoticias", this.dataNoticias, ["Noticias sobre delitos de odio", "Resto de noticias"], this.backgroundColorNoticias, this.borderColorNoticias);
   }
 
   abrirEnlaceNoticia(i: String): void{
@@ -51,5 +59,20 @@ export class NewsCardComponent implements OnInit {
       console.log(this.data_busqueda)
     }
   }
+
+  createChart(idChart: any, data: Array<Number>, labels:  Array<String>, backgroundColor:  any, borderColor: any){
+    new Chart(idChart, {
+     type: 'pie',
+     data: {
+         labels: labels,
+         datasets: [{
+             data: data,
+             backgroundColor: backgroundColor,
+             borderColor: borderColor,
+             borderWidth: 1
+         }]
+     },
+ });
+ }
 
 }

@@ -27,3 +27,15 @@ li{
 .row{
     margin-inline: 0px;
 }
+canvas{
+    margin-inline: auto;
+    margin-block: auto;
+}
+.grafico-tarta{
+    min-width: 10rem;
+    width: 90%;
+    max-width: 25rem;
+    max-height: 25rem;
+    margin-inline: auto;
+    margin-block: auto;
+}
