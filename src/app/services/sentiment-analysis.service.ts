@@ -15,6 +15,7 @@ export class SentimentAnalysisService {
 
   getDataFromBackend(text:String): Observable<Data> {
       this.data_observable = this.http.post<Data>("http://127.0.0.1:8000/api/busquedas", {texto: text});
+
       return this.data_observable;
   }
 

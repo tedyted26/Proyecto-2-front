@@ -47,10 +47,10 @@ export class SentimentTitleComponent implements OnInit {
     this.sentiment.getDataFromBackend(this.puebloSeleccionado).subscribe(
       (response: Data) => {
         this.data_busqueda = response;
-        this.n_tweets_analizados = response["twitter"]["numero_tweets"];
-
-        this.messageEvent.emit(this.data_busqueda)
         console.log(response)
+        this.n_tweets_analizados = response["twitter"]["numero_tweets"];
+        
+        this.messageEvent.emit(this.data_busqueda)
       },
       (error:any) => console.log(error),
       () => console.log("Se ha terminado el proceso")
