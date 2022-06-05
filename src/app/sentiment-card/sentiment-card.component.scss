@@ -14,7 +14,7 @@
     font-size: medium;
 }
 .card{
-    height: 18rem;
+    min-height: 10rem;
 }
 .big-text{
     font-size: 4rem;
@@ -32,6 +32,11 @@
     font-size: 3rem;
 }
 .grafica{
-    height: 200px;
+    min-width: 8rem;
+    width: 80%;
+    max-width: 15rem;
+    max-height: 15rem;
 }
-
+canvas{
+    margin-inline: auto;
+}

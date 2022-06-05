@@ -12,53 +12,31 @@ export class SentimentCardComponent implements OnInit {
 
   @Input()
   data_busqueda: Data;
-  myChart: any;
   
 
   n_tweets = 0
   polaridad = 0.
   subjetividad = 0.
 
+  //DATOS DE LOS CHARTS
+  dataPolaridad = [60, 40];
+  backgroundColorPolaridad = ['rgba(255, 99, 132, 0.5)', 'rgba(54, 162, 235, 0.7)'];
+  borderColorPolaridad = ['rgba(255, 99, 132, 0.8)', 'rgba(54, 162, 235)'];
+
+  dataSubjetividad = [30, 70];
+  backgroundColorSubjetividad = ['rgba(153, 102, 255, 0.5)', 'rgba(255, 206, 86, 0.5)'];
+  borderColorSubjetividad = ['rgba(153, 102, 255, 0.8)', 'rgba(255, 206, 86, 0.8)'];
+
+
   constructor() {}
 
   ngOnInit() {
-    this.myChart = document.getElementById("pieChartPolaridad");
     Chart.register(...registerables);
-     new Chart(this.myChart, {
-      type: 'bar',
-      data: {
-          labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-          datasets: [{
-              label: '# of Votes',
-              data: [12, 19, 3, 5, 2, 3],
-              backgroundColor: [
-                  'rgba(255, 99, 132, 0.2)',
-                  'rgba(54, 162, 235, 0.2)',
-                  'rgba(255, 206, 86, 0.2)',
-                  'rgba(75, 192, 192, 0.2)',
-                  'rgba(153, 102, 255, 0.2)',
-                  'rgba(255, 159, 64, 0.2)'
-              ],
-              borderColor: [
-                  'rgba(255, 99, 132, 1)',
-                  'rgba(54, 162, 235, 1)',
-                  'rgba(255, 206, 86, 1)',
-                  'rgba(75, 192, 192, 1)',
-                  'rgba(153, 102, 255, 1)',
-                  'rgba(255, 159, 64, 1)'
-              ],
-              borderWidth: 1
-          }]
-      },
-      options: {
-          scales: {
-              y: {
-                  beginAtZero: true
-              }
-          }
-      }
-  });
+    this.createChart("pieChartPolaridad", this.dataPolaridad, ["Tweets positivos", "Tweets negativos"], this.backgroundColorPolaridad, this.borderColorPolaridad);
+    this.createChart("pieChartSubjetividad", this.dataSubjetividad, ["Tweets objetivos", "Tweets subjetivos"], this.backgroundColorSubjetividad, this.borderColorSubjetividad);
+    
   }
+
   set_variables(){
     this.n_tweets = this.data_busqueda["twitter"]["numero_tweets"]
     this.polaridad = this.data_busqueda["twitter"]["polaridad"]
@@ -81,6 +59,21 @@ export class SentimentCardComponent implements OnInit {
 
       
     }
+  }
+
+  createChart(idChart: any, data: Array<Number>, labels:  Array<String>, backgroundColor:  any, borderColor: any){
+     new Chart(idChart, {
+      type: 'pie',
+      data: {
+          labels: labels,
+          datasets: [{
+              data: data,
+              backgroundColor: backgroundColor,
+              borderColor: borderColor,
+              borderWidth: 1
+          }]
+      },
+  });
   }
 
 }
