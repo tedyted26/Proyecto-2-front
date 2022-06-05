@@ -8,40 +8,41 @@ import { Data } from '@angular/router';
 
 import { HttpClient } from '@angular/common/http';
 
-
+/**
+ * Componente encargado de la busqueda de las provincias,
+ * el cual se encarga de llamar a la clase {@link SentimentAnalysisService} para 
+ * obtener los tweets y noticias del back. Tras esto, reenvia mediante eventos esta 
+ * información al componente padre {@link SentimentAnalisisComponent}
+ */
 @Component({
   selector: 'app-sentiment-title',
   templateUrl: './sentiment-title.component.html',
   styleUrls: ['./sentiment-title.component.scss']
 })
-export class SentimentTitleComponent implements OnInit {
 
-  array_prueba: string[] = ["A Coruña","Albacete","Alicante","Almería",
+export class SentimentTitleComponent implements OnInit {
+  /**
+   * Array con todas las provincias de españa
+   */
+  array_provincias: string[] = ["A Coruña","Albacete","Alicante","Almería",
   "Asturias","Álava","Ávila","Badajoz","Baleares","Barcelona","Burgos","Cantabria",
   "Castellón","Ceuta","Ciudad Real","Cuenca","Cáceres","Cádiz",
   "Córdoba","Girona","Granada","Guadalajara","Guipúzcoa","Huelva","Huesca","Jaén",
   "La Rioja","Las Palmas","León","Lleida","Lugo","Madrid","Melilla","Murcia","Málaga",
   "Navarra","Ourense","Palencia","Pontevedra","SC. Tenerife","Salamanca","Segovia","Sevilla",
   "Soria","Tarragona","Teruel","Toledo","Valencia","Valladolid","Vizcaya","Zamora","Zaragoza"];
-  puebloSeleccionado = "West Josianne"
+  puebloSeleccionado = ""
 
   control = new FormControl();
   filArray!: Observable<string[]>;
 
   @Output() messageEvent = new EventEmitter<Data>();
   data_busqueda: Data;
-  n_tweets_analizados = "";
-
-  private txtURL = 'test.txt';
-  constructor(private sentiment: SentimentAnalysisService, private http: HttpClient) {
-    this.getJSON().subscribe(data => {
-      console.log("PUEBLOS:")
-      console.log(data);
-     });
-  }
-  public getJSON(): Observable<any> {
-    return this.http.get(this.txtURL);
-  }
+  /**
+   * 
+   * @ignore
+   */
+  constructor(private sentiment: SentimentAnalysisService) {}
 
   ngOnInit(): void {
 
@@ -52,22 +53,29 @@ export class SentimentTitleComponent implements OnInit {
       map(val => this._filter(val))
     );
   }
-
+  /**
+   * Filtro de provincias por predicción, para mostrar en la barra
+   * de busqueda
+   * @param val string 
+   * @returns Devuelve el arrayde tipo string[] de provincias que coinciden con la
+   * predicción del teclado
+   */
   private _filter(val: string): string[] {
     const formatVal = val.toLocaleLowerCase();
-//si hay llamada a api para pillar los autocompletados hay que pillarlos aqui
-    return this.array_prueba.filter(palabra => palabra.toLocaleLowerCase().indexOf(formatVal) === 0);
+    return this.array_provincias.filter(palabra => palabra.toLocaleLowerCase().indexOf(formatVal) === 0);
   }
 
-  //Click boton
-
+  /**
+   * Llamado al realizar la busqueda de la provincia.
+   * Envia la busqueda al back y envia los datos (json con la
+   * información de los tweets y noticias) al padre {@link SentimentAnalisisComponent}
+   */
   analizarPueblo(){
     console.log("ANALIZANDO")
     this.sentiment.getDataFromBackend(this.puebloSeleccionado).subscribe(
       (response: Data) => {
         this.data_busqueda = response;
         console.log(response)
-        this.n_tweets_analizados = response["twitter"]["numero_tweets"];
         
         this.messageEvent.emit(this.data_busqueda)
       },
