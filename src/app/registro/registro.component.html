@@ -1,17 +1,12 @@
-
-<div class="container-reg">
-    <div class="recuadro">
-        <h1 class="h1logreg">¡CREA TU CUENTA!</h1>
-        <div class="container_form">
-            <form ngNoForm [action]="url" method="" name="formulario">
-                <input type="text" name="nombreR" id="nombreR" placeholder="Nombre completo"/>
-                <input type="email" name="email" id="email" placeholder="Correo electrónico"/>
-                <input type="password" name="pass" id="pass" placeholder="Contraseña"/>
-                <input type="password" name="passConf" id="passConf" placeholder="Confirmar contraseña"/>
-                <input type="submit" name="crearCuenta" value="Crear cuenta"/>
-            </form>
-        </div>
-        <p>¿Ya tienes cuenta?</p>
-        <a mat-button [routerLink]="['/Login']" routerLinkActive="active" class="linkReg">¡Inicia Sesión!</a>
-    </div>
+<h5>
+    Registrar a un nuevo administrador
+</h5>
+<div class="container_form">
+    <form ngNoForm [action]="url" method="" name="formulario">
+        <input type="text" name="nombreR" id="nombreR" placeholder="Nombre completo"/>
+        <input type="email" name="email" id="email" placeholder="Correo electrónico"/>
+        <input type="password" name="pass" id="pass" placeholder="Contraseña"/>
+        <input type="password" name="passConf" id="passConf" placeholder="Confirmar contraseña"/>
+        <input type="submit" name="crearCuenta" value="Crear cuenta"/>
+    </form>
 </div>

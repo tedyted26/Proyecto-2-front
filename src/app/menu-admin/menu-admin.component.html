@@ -1,14 +1,14 @@
 <div class="title_container">
     <div class="img"></div>
     <div class="title">
-        <h1>Bienvenido al menú de administrador</h1>
-        <h2>Personaliza las funcionalidades de la web a tu gusto</h2>
+        <h2>Bienvenido al menú de administrador</h2>
+        <h3>Personaliza las funcionalidades de la web a tu gusto</h3>
     </div> 
 </div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-3">
-            <app-opciones-admin></app-opciones-admin>
+        <div class="col-lg-3 col-md-5">
+            <app-opciones-admin></app-opciones-admin>        
         </div>
         <div class="col-md-9">
             <div>
@@ -28,6 +28,10 @@
             <div>
                 <app-estad-admin></app-estad-admin>
             </div>
+        <div class="col-lg-9 col-md-7">
+            <div class="container">
+                <router-outlet name="opcionesAdmin"></router-outlet>
+            </div>  
         </div>
     </div>
 </div>
