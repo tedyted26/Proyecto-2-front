@@ -24,6 +24,7 @@ export class AuthInterceptor implements HttpInterceptor {
       return next.handle(cloned);
     }
     else{
+      console.log("No hay token")
       return next.handle(req)
     }
     
