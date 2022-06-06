@@ -2,37 +2,37 @@
 <p>Aviso: el sistema realiza las búsquedas de manera periódica cada día. La configuración se guardará pero no se aplicará hasta la próxima tarea programada (normalmente 3AM).</p>
 <h6>Periódicos de los que se extraen las noticias:</h6>
 <div class="form-check">
-    <input class="form-check-input" type="checkbox" id="flexABC" *ngIf="[valorABC]" checked >
+    <input class="form-check-input" type="checkbox" id="flexABC" [checked]="valorABC">
     <label class="form-check-label" for="flexABC">
       ABC
     </label>
 </div>
 <div class="form-check">
-    <input class="form-check-input" type="checkbox" id="flex20Min" *ngIf="[valorABC]" checked>
+    <input class="form-check-input" type="checkbox" id="flex20Min" [checked]="valor20Min">
     <label class="form-check-label" for="flex20Min">
       20 Minutos
     </label>
 </div>
 <div class="form-check">
-    <input class="form-check-input" type="checkbox" id="flexElPais" *ngIf="[valorABC]" checked>
+    <input class="form-check-input" type="checkbox" id="flexElPais" [checked]="valorElPais">
     <label class="form-check-label" for="flexElPais">
       El País
     </label>
 </div>
 <div class="form-check">
-    <input class="form-check-input" type="checkbox" id="flexLaSexta" *ngIf="[valorABC]" checked>
+    <input class="form-check-input" type="checkbox" id="flexLaSexta" [checked]="valorLaSexta">
     <label class="form-check-label" for="flexLaSexta">
       La sexta
     </label>
 </div>
 <div class="form-check">
-    <input class="form-check-input" type="checkbox" id="flexLaVang" *ngIf="[valorABC]" checked>
+    <input class="form-check-input" type="checkbox" id="flexLaVang" [checked]="valorLaVang">
     <label class="form-check-label" for="flexLaVang">
       La Vanguardia
     </label>
 </div>
 <div class="form-check">
-    <input class="form-check-input" type="checkbox" id="flexLaRazon" *ngIf="[valorABC]" checked>
+    <input class="form-check-input" type="checkbox" id="flexLaRazon" [checked]="valorLaRazon">
     <label class="form-check-label" for="flexLaRazon">
       La Razón
     </label>
