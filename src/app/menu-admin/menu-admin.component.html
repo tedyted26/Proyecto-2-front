@@ -11,13 +11,21 @@
             <app-opciones-admin></app-opciones-admin>
         </div>
         <div class="col-md-9">
-            <div *ngIf="displayEstad">
+            <div>
                 <app-estad-admin></app-estad-admin>
             </div>
-            <div *ngIf="displayConfig">
+            <div>
                 <app-estad-admin></app-estad-admin>
             </div>
-            <div *ngIf="displayInfo">
+            <p>
+                <strong>Email:{{ email }}</strong>
+                <br>
+                <strong>Nombre:{{ name }}</strong>
+                <br>
+                <strong>TOKEN:{{ currentUser }}</strong>
+              
+              </p>
+            <div>
                 <app-estad-admin></app-estad-admin>
             </div>
         </div>

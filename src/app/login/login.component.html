@@ -3,10 +3,12 @@
     <div class="recuadro">
         <h1 class="h1logreg">¡Bienvenido!</h1>
         <div class="container_form">
-            <form ngNoForm [action]="url" method="" name="formulario">
-                <input type="email" name="email" id="email" placeholder="Correo electrónico"/>
-                <input type="password" name="pass" id="pass" placeholder="Contraseña"/>
-                <input type="submit" name="loginB" value="Iniciar sesión"/>
+            <form (ngSubmit)="submitForm()" [formGroup]="form" name="formulario">
+                <input type="email" formControlName="email" name="email" id="email" placeholder="Correo electrónico"/>
+                <input type="password"  formControlName="password" name="pass" id="pass" placeholder="Contraseña"/>
+            
+                <button type="submit" mat-raised-button color="primary">Iniciar</button>
+
             </form>
         </div>
         <p>¿No tienes cuenta?</p>

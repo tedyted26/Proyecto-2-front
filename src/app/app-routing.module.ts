@@ -17,8 +17,8 @@ const routes: Routes = [
    { path: 'QuienesSomos', component: QuienesSomosComponent},
    { path: 'Error', component: PaginaError404Component},
 
-   { path: 'Login', component: LoginComponent},
-   { path: 'Registro', component: RegistroComponent},
+   { path: 'login', component: LoginComponent},
+   { path: 'registro', component: RegistroComponent},
 
    { path: 'Admin', component: MenuAdminComponent},
    { path: '**', redirectTo: 'Error', pathMatch: 'full'},

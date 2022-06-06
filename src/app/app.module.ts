@@ -13,7 +13,7 @@ import { WelcomeCardComponent } from './welcome-card/welcome-card.component';
 import { SeccionEquipoComponent } from './seccion-equipo/seccion-equipo.component';
 import { TarjetaIntegranteComponent } from './tarjeta-integrante/tarjeta-integrante.component';
 import { SentimentAnalysisComponent } from './sentiment-analysis/sentiment-analysis.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { RouterModule, Routes } from '@angular/router';
@@ -39,6 +39,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
 import { SentimentAnalysisService } from './services/sentiment-analysis.service';
+import { AuthInterceptor } from './_helpers/auth.interceptor';
 
 
 
@@ -82,7 +83,7 @@ import { SentimentAnalysisService } from './services/sentiment-analysis.service'
     MatInputModule
 
   ],
-  providers: [],
+  providers: [ { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
