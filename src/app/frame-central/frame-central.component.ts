@@ -1,13 +1,26 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { CardInfoModel } from '../modelos/card-info-model.model';
-import { AppComponent } from '../app.component';
 
+
+/**
+ * Componente cargado con la ruta {@link http://localhost:4200/home}.
+ * 
+ * Contiene los componentes {@link WelcomeCardComponent} y las tarjetas cargadas dinamicamente
+ * {@link DescriptionCardComponent}
+ */
 @Component({
   selector: 'app-frame-central',
   templateUrl: './frame-central.component.html',
   styleUrls: ['./frame-central.component.scss']
 })
+
 export class FrameCentralComponent implements OnInit {
+  /**
+   * Lista con la información para cargar en los componentes generedos mediante
+   *  un *ngFor {@link DescriptionCardComponent}.
+   * 
+   * La lista contiene instancias de {@link CardInfoModel}
+   */
   cards_desc = [
     new CardInfoModel("https://images.pexels.com/photos/4553618/pexels-photo-4553618.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   "Misión","Queremos garantizar la seguridad y comodidad de nuestros clientes a la hora de viajar, sobretodo a aquellos pertenecientes a colectivos sociales vulnerables propensos a ser víctimas de discriminaciones o delitos de odio."),
@@ -17,12 +30,13 @@ export class FrameCentralComponent implements OnInit {
   "Valores","Para nosotros siempre serán prioridad las personas. Para ello la inclusión social, el respeto al individuo, seguridad, comodidad, la facilidad de los trámites y la accesibilidad de nuestros servicios serán siempre una garantía para nuestros clientes."),
 ];
 
-//https://cdn.pixabay.com/photo/2020/07/08/04/12/work-5382501_960_720.jpg
-
+  /**
+   * @ignore
+   */
   constructor() { }
-
-  ngOnInit(): void {
-    
-  }
+  /**
+   * @ignore
+   */
+  ngOnInit(): void {}
   
 }
