@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
     .login(this.form.get('email')?.value, this.form.get('password')?.value)
     .subscribe((response) => {
       console.log(response)
-      localStorage.setItem('user_auth', response.token);
+      localStorage.setItem('user_auth', response.access_token);
       localStorage.setItem('name', 'Andres');
       localStorage.setItem('email', this.form.get('email')?.value);
       this.router.navigate(['/Admin']);

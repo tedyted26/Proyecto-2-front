@@ -13,7 +13,7 @@ export class AuthInterceptor implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     let authReq = req;
     //const token = this.token.getToken();
-    const token = localStorage.getItem('auth_token')
+    const token = localStorage.getItem('user_auth')
     
     if (token) {
       console.log("Si hay token")

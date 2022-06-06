@@ -25,9 +25,14 @@ export class AuthServiceService {
         console.log(response.access_token)
         console.log("Token^^")
         this._isLoggedIn$.next(true);
+        /*
         localStorage.setItem('user_auth', response.access_token);
         localStorage.setItem('name', 'Andres');
-        localStorage.setItem('email', email);
+        localStorage.setItem('email', email);*/
+        
+        console.log(localStorage.getItem('user_auth'))
+        console.log("Fin lcstorage")
+        
       })
     );
 }
