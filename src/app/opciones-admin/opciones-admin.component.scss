@@ -1,24 +1,22 @@
 .content_container{
-    margin-block: 4rem;
-    margin-inline: auto;
-    padding-block: 3rem;
-    margin-left: 0%;
-    border-radius: 30px;
-    background: var(--maximum-blue-purple);
+    margin-block: 3rem;
+    padding-block: 2rem;
+    border-radius: 10px;
+    background: var(--dark-cornflower-blue);
     height: fit-content;
-    color: var(--azul-casi-negro);
-
-    
-
-    hr{
-        border-top: 0.1vw solid var(--azul-casi-negro);
-        border-radius: 5px;
-    }
 }
 .navElement {
-    color: #35416fff;
+    color: rgb(149, 158, 185);
+    margin-block: 0.5rem;
+    &:hover{
+        text-shadow: 0px 0.5px 0.5px var(--maximum-blue-purple);
+    }
+}
+.active{
+    color: white;
 
     &:hover{
-        text-shadow: 0px 0.5px 0.5px #35416fff;
+        text-shadow: 0px 0.5px 0.5px white;
     }
+
 }

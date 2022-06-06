@@ -39,6 +39,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
 import { SentimentAnalysisService } from './services/sentiment-analysis.service';
+import { ConfigAdminComponent } from './config-admin/config-admin.component';
+import { OpcionesCuentaAdminComponent } from './opciones-cuenta-admin/opciones-cuenta-admin.component';
 
 
 
@@ -66,7 +68,9 @@ import { SentimentAnalysisService } from './services/sentiment-analysis.service'
     MenuAdminComponent,
     OpcionesAdminComponent,
     EstadAdminComponent,
-    SentimentHelpComponent
+    SentimentHelpComponent,
+    ConfigAdminComponent,
+    OpcionesCuentaAdminComponent
   ],
   imports: [
     BrowserModule,
