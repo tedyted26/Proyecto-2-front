@@ -8,15 +8,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-3 col-md-5">
-            <app-opciones-admin></app-opciones-admin>        
-        </div>
-        <div class="col-md-9">
-            <div>
-                <app-estad-admin></app-estad-admin>
-            </div>
-            <div>
-                <app-estad-admin></app-estad-admin>
-            </div>
+            <app-opciones-admin></app-opciones-admin> 
             <p>
                 <strong>Email:{{ email }}</strong>
                 <br>
@@ -24,10 +16,8 @@
                 <br>
                 <strong>TOKEN:{{ currentUser }}</strong>
               
-              </p>
-            <div>
-                <app-estad-admin></app-estad-admin>
-            </div>
+              </p>       
+        </div> 
         <div class="col-lg-9 col-md-7">
             <div class="container">
                 <router-outlet name="opcionesAdmin"></router-outlet>

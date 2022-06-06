@@ -13,7 +13,7 @@ export class ConfigAdminComponent implements OnInit {
   valorElPais = true;
   valorLaSexta = true;
   valorLaVang = true;
-  valorLaRazon = true;
+  valorLaRazon = false;
 
   ngOnInit(): void {
   }
