@@ -2,5 +2,9 @@ h5{
     font-family: 'DM Serif Display', serif ;
 }
 .graficas{
-    height: 5rem;
+    max-width: 70vw;
+    min-width: 10rem;
+}
+.row{
+    margin-block: 1rem;
 }
