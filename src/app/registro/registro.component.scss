@@ -1,38 +1,16 @@
 /*LOGIN*/
-*{
+h5{
     font-family: 'DM Serif Display', serif ;
 }
-.container-reg{
-    background-color: var(--fondo);
-    padding: 70px;
-}
-
-.recuadro{
+form{
+    text-align: center;
     width: 50%;
-    text-align: center;
-    margin-inline: auto;
-    border: 1px solid var(--dark-cornflower-blue);
-    background-color: var(--maximum-blue-purple);
-    padding: 50px;
-}
-
-.h1logreg{
-    font-family: 'DM Serif Display', serif ;
-    text-align: center;
-    font-size: 28px;
-    color: var(--dark-cornflower-blue);
-    font-weight: 700;
-}
-.logologin{
-    width: 400px;
-    margin-top: 60px;
-    left: 50%;
-    width: 350px;
+    margin-top: 1rem;
 }
 input[type=text], input[type=email], input[type=password]{
-    width: 85%;
+    width: 100%;
     padding: 12px;
-    margin: 8px 0;
+    margin: 8px auto;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -41,9 +19,9 @@ input[type=text], input[type=email], input[type=password]{
 }
 
 input[type=submit]{
-    width: 85%;
+    width: 100%;
     padding: 12px;
-    margin: 8px 0;
+    margin: 8px auto;
     display: inline-block;
     border: 1px solid var(--dark-cornflower-blue);
     border-radius: 10px;
@@ -57,13 +35,4 @@ input[type=submit]{
         background-color: rgb(67, 82, 141);
     }
     
-}
-
-.linkReg{
-    text-decoration: none;
-    color: var(--dark-cornflower-blue);
-    font-weight: 600;
-    &:hover{
-        text-shadow: 1px 1px white;
-    }
 }

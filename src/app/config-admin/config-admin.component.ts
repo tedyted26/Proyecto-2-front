@@ -8,6 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class ConfigAdminComponent implements OnInit {
 
   constructor() { }
+  valorABC = true;
+  valor20Min = true;
+  valorElPais = true;
+  valorLaSexta = true;
+  valorLaVang = true;
+  valorLaRazon = true;
 
   ngOnInit(): void {
   }
