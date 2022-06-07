@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Chart, registerables, Scale} from 'chart.js';
+import { DataExtractionService } from '../services/data-extraction.service';
 
 @Component({
   selector: 'app-estad-admin',
@@ -9,7 +10,7 @@ import {Chart, registerables, Scale} from 'chart.js';
 export class EstadAdminComponent implements OnInit {
 
   //DATOS DE LOS CHARTS
-  dataBusquedas = [60, 40, 60, 40, 60, 40];
+  
   labelsLocalidad = ["A Coruña","Albacete","Alicante","Almería",
   "Asturias","Álava","Ávila","Badajoz","Baleares","Barcelona","Burgos","Cantabria",
   "Castellón","Ceuta","Ciudad Real","Cuenca","Cáceres","Cádiz",
@@ -34,16 +35,44 @@ export class EstadAdminComponent implements OnInit {
   'rgba(153, 102, 255)',
   'rgba(255, 159, 64)'];
 
-  constructor() { }
+  constructor(private postData:DataExtractionService) { }
+  
+  chart_busquedas:Chart<"bar", Number[], String>;
+  chart_odio:Chart<"bar", Number[], String>;
+
+  provincias_data: any;
 
   ngOnInit(): void {
     Chart.register(...registerables);
-    this.createChart("busquedas-localidad", this.dataBusquedas, this.labelsLocalidad, this.backgroundColorBusquedaLocalidad, this.borderColorBusquedaLocalidad);
-    this.createChart("odio-localidad", this.dataNumOdio, this.labelsLocalidad, this.backgroundColorOdioLocalidad, this.borderColorOdioLocalidad);
+   
+  
+    this.postData.getGraphicsData().subscribe(
+      (result)=>{
+
+      this.provincias_data = result;
+      console.warn("Resultado del Endpoint:" , result);
+      let dataBusquedas: number[] = [];
+
+      console.log(typeof(result))
+      this.provincias_data.forEach( (prov: any) => {
+        if (prov){
+          dataBusquedas.push(prov.visitas_totales)
+        }else{
+          dataBusquedas.push(0)
+        }
+        
+      });
+
+      this.chart_busquedas = this.createChart("busquedas-localidad", dataBusquedas, this.labelsLocalidad, this.backgroundColorBusquedaLocalidad, this.borderColorBusquedaLocalidad);
+      this.chart_odio = this.createChart("odio-localidad", this.dataNumOdio, this.labelsLocalidad, this.backgroundColorOdioLocalidad, this.borderColorOdioLocalidad);
+      
+    })
+
+   
   }
 
   createChart(idChart: any, data: Array<Number>, labels:  Array<String>, backgroundColor:  any, borderColor: any){
-    new Chart(idChart, {
+    return new Chart(idChart, {
      type: 'bar',
      data: {
          labels: labels,

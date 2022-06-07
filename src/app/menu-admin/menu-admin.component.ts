@@ -12,6 +12,7 @@ import { UserData } from '../data';
 export class MenuAdminComponent implements OnInit {
 
   user_data: UserData;
+  provincias_data: any;
   constructor(private postData:DataExtractionService){
 
   }
@@ -22,7 +23,8 @@ export class MenuAdminComponent implements OnInit {
         console.warn("Resultado del Endpoint:" , result);
         
       
-      })
+      });
+
   }
 
 
