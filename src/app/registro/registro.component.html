@@ -2,11 +2,12 @@
     Registrar a un nuevo administrador
 </h5>
 <div class="container_form">
-    <form ngNoForm [action]="url" method="" name="formulario">
+    <form ngNoForm name="formulario">
         <input type="text" name="nombreR" id="nombreR" placeholder="Nombre completo"/>
         <input type="email" name="email" id="email" placeholder="Correo electrónico"/>
         <input type="password" name="pass" id="pass" placeholder="Contraseña"/>
         <input type="password" name="passConf" id="passConf" placeholder="Confirmar contraseña"/>
-        <input type="submit" name="crearCuenta" value="Crear cuenta"/>
+        <!--<input type="submit" name="crearCuenta" value="Crear cuenta"/>-->
     </form>
+    <button  name="crearCuenta" value="Crear cuenta" (click)="registrarAdmin()">aa</button>
 </div>

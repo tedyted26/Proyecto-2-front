@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-
+import { Data } from '../data';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -10,6 +10,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class ApiService {
+  data_observable: Observable<Data>;
 
   constructor(private http: HttpClient) {}
   login(email: string, password: string) {
@@ -19,7 +20,9 @@ export class ApiService {
   }
   register(name: string, email: string, password: string) {
     console.log("Va hacer registro")
-    return this.http.post('http://127.0.0.1:8000/api/auth/register', { name, email, password })
+    this.data_observable = this.http.post<Data>("http://127.0.0.1:8000/api/register",
+     {name: name, email: email, password: password});
+    return this.data_observable;
 
   }
 
