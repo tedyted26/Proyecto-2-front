@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { ConfigAdminComponent } from './config-admin/config-admin.component';
 import { EstadAdminComponent } from './estad-admin/estad-admin.component';
 import { FrameCentralComponent } from './frame-central/frame-central.component';
-
 import { LoginComponent } from './login/login.component';
 
 import { MenuAdminComponent } from './menu-admin/menu-admin.component';

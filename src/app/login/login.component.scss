@@ -1,10 +1,6 @@
-/*LOGIN*/
-*{
-    font-family: 'DM Serif Display', serif;
-}
 .container-reg{
     background-color: var(--fondo);
-    padding: 70px;
+    height: 80vh;
 }
 
 .recuadro{
@@ -17,9 +13,9 @@
 }
 
 .h1logreg{
-    font-family: 'DM Serif Display', serif;
+    font-family: 'Oleo Script Swash Caps', cursive;
     text-align: center;
-    font-size: 28px;
+    font-size: 3rem;
     color: var(--dark-cornflower-blue);
     font-weight: 700;
     
