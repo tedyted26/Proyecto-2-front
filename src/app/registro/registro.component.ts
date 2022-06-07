@@ -40,8 +40,8 @@ export class RegistroComponent implements OnInit {
         if (this.cont == this.cont2){
 
           //TODO primero comprobar si existe en BBDD
-          /*
-          this.apiService.register("yago","yago@gmail.com","123456").subscribe(
+          
+          this.apiService.register(this.nombre,this.correo,this.cont).subscribe(
             (response: Data) => {
                console.log("Registro intentado")
                console.log(response)
@@ -49,7 +49,7 @@ export class RegistroComponent implements OnInit {
             (error:any) => console.log(error),
             () => console.log("Se ha terminado el proceso")
             );
-          */
+          
           
           this.textoAlerta = "Administrador creado con éxito.";
           this.tipoAlerta = this.alertaSuccess;
