@@ -44,7 +44,6 @@ export class SentimentTitleComponent implements OnInit {
   constructor(private sentiment: SentimentAnalysisService) {}
 
   ngOnInit(): void {
-
     //o aqui (api)
     this.filArray = this.control.valueChanges.pipe(
       debounceTime(500),
@@ -71,17 +70,20 @@ export class SentimentTitleComponent implements OnInit {
    */
   analizarPueblo(){
     console.log("ANALIZANDO")
-    this.sentiment.getDataFromBackend(this.puebloSeleccionado).subscribe(
-      (response: Data) => {
-        this.data_busqueda = response;
-        console.log(response)
-        
-        this.messageEvent.emit(this.data_busqueda)
-      },
-      (error:any) => console.log(error),
-      () => console.log("Se ha terminado el proceso")
-    );
+    if(this.array_provincias.includes(this.puebloSeleccionado)){
+      this.sentiment.getDataFromBackend(this.puebloSeleccionado).subscribe(
+        (response: Data) => {
+          this.data_busqueda = response;
+          console.log(response)
+          
+          this.messageEvent.emit(this.data_busqueda)
+        },
+        (error:any) => console.log(error),
+        () => console.log("Se ha terminado el proceso")
+      );
+    }
+    else{
+      console.log("error")
+    }
   }
-
-
 }

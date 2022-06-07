@@ -36,7 +36,13 @@
     width: 80%;
     max-width: 15rem;
     max-height: 15rem;
+    margin-inline: auto;
 }
 canvas{
     margin-inline: auto;
+}
+.dato_tweeter{
+    margin-block: 1rem;
+    font-size: 2rem;
+    text-align: center;
 }

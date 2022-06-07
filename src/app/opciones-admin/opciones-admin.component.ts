@@ -8,17 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class OpcionesAdminComponent implements OnInit {
 
   constructor() { }
-  currentUser: any;
-  token: any;
   email: any;
   name: any;
 
   ngOnInit(): void {
-    this.currentUser = localStorage.getItem('user_auth');
     this.email = localStorage.getItem('email');
     this.name = localStorage.getItem('name');
-    this.name = "Ana"
-    this.email = "ana@mail.com"
   }
   displayEstad = false;
   onPress() {
