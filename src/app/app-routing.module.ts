@@ -22,10 +22,10 @@ const routes: Routes = [
    { path: 'Login', component: LoginComponent},
 
    { path: 'Admin', component: MenuAdminComponent, children: [
-    { path: "", outlet: "opcionesAdmin", component: ConfigAdminComponent},
+    { path: '', outlet: "opcionesAdmin", component: ConfigAdminComponent},
     { path: "Configuracion", outlet: "opcionesAdmin", component: ConfigAdminComponent},
     { path: "Estadisticas", outlet: "opcionesAdmin", component: EstadAdminComponent},
-    { path: "RegistrarAdmin", outlet: "opcionesAdmin", component: RegistroComponent},
+    { path: "RegistrarAdmin", outlet: "opcionesAdmin", component: RegistroComponent}
    ]},
    { path: '**', redirectTo: 'Error', pathMatch: 'full'},
 
