@@ -24,9 +24,9 @@ const routes: Routes = [
 
    { path: 'Admin', component: MenuAdminComponent, children: [
     { path: '', outlet: "opcionesAdmin", component: ConfigAdminComponent},
-    { path: "Configuracion", outlet: "opcionesAdmin", component: ConfigAdminComponent},
-    { path: "Estadisticas", outlet: "opcionesAdmin", component: EstadAdminComponent},
-    { path: "RegistrarAdmin", outlet: "opcionesAdmin", component: RegistroComponent}
+    { path: "Configuracion", outlet: "opcionesAdmin", component: ConfigAdminComponent,canActivate:[AuthServiceService]},
+    { path: "Estadisticas", outlet: "opcionesAdmin", component: EstadAdminComponent,canActivate:[AuthServiceService]},
+    { path: "RegistrarAdmin", outlet: "opcionesAdmin", component: RegistroComponent,canActivate:[AuthServiceService]}
    ], canActivate:[AuthServiceService]},
    { path: '**', redirectTo: 'Error', pathMatch: 'full'},
 
