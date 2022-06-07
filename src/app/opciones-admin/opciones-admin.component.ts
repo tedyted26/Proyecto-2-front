@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuAdminComponent } from '../menu-admin/menu-admin.component';
 
 @Component({
   selector: 'app-opciones-admin',
