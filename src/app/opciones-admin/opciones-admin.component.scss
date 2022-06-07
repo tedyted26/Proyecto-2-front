@@ -1,10 +1,11 @@
 .content_container{
-    margin-block: 3rem;
-    padding-block: 2rem;
-    padding-inline: 0.5rem;
+    margin-top: 3rem;
+    padding-bottom: 2rem;
+    padding-inline: 0rem;
     border-radius: 10px;
     background: var(--dark-cornflower-blue);
     height: fit-content;
+    overflow: hidden;
 }
 .navElement {
     color: rgb(149, 158, 185);
@@ -20,4 +21,17 @@
         text-shadow: 0px 0.5px 0.5px white;
     }
 
+}
+.admin-info{
+    background-color: var(--maximum-blue-purple);
+    height: 8rem;
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+    & h4, h5{
+        color: white;
+        font-family: 'DM Serif Display', serif ;
+    }
+    & h4 {
+        font-size: 2rem;
+    }
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuAdminComponent } from '../menu-admin/menu-admin.component';
 
 @Component({
   selector: 'app-opciones-admin',
@@ -9,8 +8,12 @@ import { MenuAdminComponent } from '../menu-admin/menu-admin.component';
 export class OpcionesAdminComponent implements OnInit {
 
   constructor() { }
+  email: any;
+  name: any;
 
   ngOnInit(): void {
+    this.email = localStorage.getItem('email');
+    this.name = localStorage.getItem('name');
   }
   displayEstad = false;
   onPress() {

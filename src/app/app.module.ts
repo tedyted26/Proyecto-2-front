@@ -71,7 +71,7 @@ import { OpcionesCuentaAdminComponent } from './opciones-cuenta-admin/opciones-c
     EstadAdminComponent,
     SentimentHelpComponent,
     ConfigAdminComponent,
-    OpcionesCuentaAdminComponent
+    OpcionesCuentaAdminComponent,
   ],
   imports: [
     BrowserModule,

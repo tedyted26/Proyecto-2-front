@@ -15,24 +15,25 @@ export class LoginComponent implements OnInit {
   email: new FormControl(null, Validators.required),
   password: new FormControl(null, Validators.required),
   });
+
+  textoError="";
+  
   constructor(private authService: AuthServiceService,private tokenStorage: TokenStorageService, private router:Router) { }
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    
   }
   
 
   submitForm(){
     
     if (this.form.invalid){
-      console.log('Form invalido')
-      return;
+      this.textoError="Comprueba los campos.";
     }
-    console.log("Formulario rellenado exitosamente.")
     this.authService
     .login(this.form.get('email')?.value, this.form.get('password')?.value)
     .subscribe((response) => {
       console.log(response)
-      localStorage.setItem('user_auth', response.token);
+      localStorage.setItem('user_auth', response.access_token);
       localStorage.setItem('name', 'Andres');
       localStorage.setItem('email', this.form.get('email')?.value);
       this.router.navigate(['/Admin']);

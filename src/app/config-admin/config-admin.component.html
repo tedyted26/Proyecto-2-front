@@ -1,39 +1,71 @@
-<h5>Configuración de búsqueda</h5>
-<p>Aviso: el sistema realiza las búsquedas de manera periódica cada día. La configuración se guardará pero no se aplicará hasta la próxima tarea programada (normalmente 3AM).</p>
-<h6>Periódicos de los que se extraen las noticias:</h6>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" id="flexABC" *ngIf="[valorABC]" checked >
-    <label class="form-check-label" for="flexABC">
-      ABC
-    </label>
-</div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" id="flex20Min" *ngIf="[valorABC]" checked>
-    <label class="form-check-label" for="flex20Min">
-      20 Minutos
-    </label>
-</div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" id="flexElPais" *ngIf="[valorABC]" checked>
-    <label class="form-check-label" for="flexElPais">
-      El País
-    </label>
-</div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" id="flexLaSexta" *ngIf="[valorABC]" checked>
-    <label class="form-check-label" for="flexLaSexta">
-      La sexta
-    </label>
-</div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" id="flexLaVang" *ngIf="[valorABC]" checked>
-    <label class="form-check-label" for="flexLaVang">
-      La Vanguardia
-    </label>
-</div>
-<div class="form-check">
-    <input class="form-check-input" type="checkbox" id="flexLaRazon" *ngIf="[valorABC]" checked>
-    <label class="form-check-label" for="flexLaRazon">
-      La Razón
-    </label>
+<div [class]="tipoAlerta" role="alert">{{textoAlerta}}</div>
+<div class="row">
+  <div class="col-md-6 col-sm-12 ">
+    <div class="row fila">
+      <div class="col-md-12">
+          <h5>Configuración de búsqueda</h5>
+          <p><strong>Aviso</strong>: el sistema realiza las búsquedas de manera periódica cada día. La configuración se
+            guardará pero no se
+            aplicará hasta la próxima tarea programada (normalmente 3AM).</p>
+          <h6>Periódicos de los que se extraen las noticias:</h6>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="flexABC" [checked]="valorABC">
+            <label class="form-check-label" for="flexABC">
+              ABC
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="flex20Min" [checked]="valor20Min">
+            <label class="form-check-label" for="flex20Min">
+              20 Minutos
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="flexElPais" [checked]="valorElPais">
+            <label class="form-check-label" for="flexElPais">
+              El País
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="flexLaSexta" [checked]="valorLaSexta">
+            <label class="form-check-label" for="flexLaSexta">
+              La sexta
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="flexLaVang" [checked]="valorLaVang">
+            <label class="form-check-label" for="flexLaVang">
+              La Vanguardia
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="flexLaRazon" [checked]="valorLaRazon">
+            <label class="form-check-label" for="flexLaRazon">
+              La Razón
+            </label>
+          </div>
+        </div>
+        
+      <button class="btn btn-primary" (click)="guardarPeriodicos()">Guardar cambios</button>
+    </div>
+
+  </div>
+  <div class="col-md-6 col-sm-12 ">
+    <div class="row fila">
+      <div class="col-md-12">
+          <h5>Configuración de contacto</h5>
+          <p>Esta es la información de contacto que se muestra a los usuarios en la parte inferior de la página.</p>
+          <div class="container_form">
+            <form ngNoForm name="formulario">
+              <h6>Número de teléfono de contacto: </h6>
+              <input type="tel" name="numeroTel" id="numeroTel" placeholder="Número de teléfono"
+                [(ngModel)]="numeroTel" />
+              <h6>Correo electrónico de contacto: </h6>
+              <input type="email" name="email" id="email" placeholder="Correo electrónico" [(ngModel)]="correo" />
+            </form>
+          </div>
+      </div>
+      <button class="btn btn-primary" (click)="guardarContacto()">Guardar cambios</button>
+    </div>
+  </div>
 </div>
