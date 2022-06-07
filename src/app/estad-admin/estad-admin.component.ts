@@ -47,9 +47,9 @@ export class EstadAdminComponent implements OnInit {
    
   
     this.postData.getGraphicsData().subscribe(
-      (result)=>{
+      (result: any)=>{
 
-      this.provincias_data = result;
+      this.provincias_data = result.localidad;
       console.warn("Resultado del Endpoint:" , result);
       let dataBusquedas: number[] = [];
 
@@ -63,8 +63,10 @@ export class EstadAdminComponent implements OnInit {
         
       });
 
+      let odio_data = result.odio;
+
       this.chart_busquedas = this.createChart("busquedas-localidad", dataBusquedas, this.labelsLocalidad, this.backgroundColorBusquedaLocalidad, this.borderColorBusquedaLocalidad);
-      this.chart_odio = this.createChart("odio-localidad", this.dataNumOdio, this.labelsLocalidad, this.backgroundColorOdioLocalidad, this.borderColorOdioLocalidad);
+      this.chart_odio = this.createChart("odio-localidad", odio_data, this.labelsLocalidad, this.backgroundColorOdioLocalidad, this.borderColorOdioLocalidad);
       
     })
 
