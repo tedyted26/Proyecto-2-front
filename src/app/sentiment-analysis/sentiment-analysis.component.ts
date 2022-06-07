@@ -21,6 +21,7 @@ export class SentimentAnalysisComponent{
    * {@link SentimentCardComponent} y {@link NewsCardComponent}
    */
   data_busqueda: Data;
+  textoError = "";
   /**
    * Constructor
    * @param sentiment 
@@ -39,6 +40,10 @@ export class SentimentAnalysisComponent{
     console.log("MENSAJE RECIBIDO")
     console.log($event)
     this.data_busqueda = $event
+  }
+
+  receiveError($event : String){
+    this.textoError = $event as string
   }
 
 }

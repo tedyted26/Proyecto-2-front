@@ -78,13 +78,14 @@ mat-form-field{
     }
 }
 form{
+   
     width: 80%;
     margin-inline: auto;
     & .col-md-11, .col-md-1{
         padding-inline: 0;
-        margin-top: 1rem;
     }
 }
+
 ::ng-deep .mat-autocomplete-panel{
     background-color: white;
    
