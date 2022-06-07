@@ -1,7 +1,8 @@
-<app-sentiment-title (messageEvent)="receiveMessage($event)"></app-sentiment-title>
-<app-sentiment-card [data_busqueda] = "data_busqueda"></app-sentiment-card>
-<app-news-card [data_busqueda] = "data_busqueda"></app-news-card>
-<div class="container info">
+<app-sentiment-title (messageEvent)="receiveMessage($event)" (errorEvent)="receiveError($event)"></app-sentiment-title>
+<div class="alert alert-danger" *ngIf="textoError!=''">{{textoError}}</div>
+<app-sentiment-card [data_busqueda] = "data_busqueda" *ngIf="data_busqueda"></app-sentiment-card>
+<app-news-card [data_busqueda] = "data_busqueda" *ngIf="data_busqueda"></app-news-card>
+<div class="container info" id="info">
     <h3>¿Sabias que...?</h3>
     <p>Melilla, País Vasco y Navarra son las comunidades españolas con mayor tasa de delitos de odio al año por cada 100 000 habitantes.
         A continuación se muestran el numero de casos de delitos de odio durante el año 2021 de estas tres comunidades en comparación a otras con menor tasa:

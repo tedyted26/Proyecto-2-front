@@ -36,6 +36,7 @@ export class SentimentTitleComponent implements OnInit {
   filArray!: Observable<string[]>;
 
   @Output() messageEvent = new EventEmitter<Data>();
+  @Output() errorEvent = new EventEmitter<String>();
   data_busqueda: Data;
   /**
    * 
@@ -77,13 +78,14 @@ export class SentimentTitleComponent implements OnInit {
           console.log(response)
           
           this.messageEvent.emit(this.data_busqueda)
+          this.errorEvent.emit("")
         },
-        (error:any) => console.log(error),
+        (error:any) => this.errorEvent.emit("Se ha producido un error durante la carga de datos."),
         () => console.log("Se ha terminado el proceso")
       );
     }
     else{
-      console.log("error")
+      this.errorEvent.emit("Localidad no encontrada.");
     }
   }
 }

@@ -10,7 +10,7 @@
 
 .help, .info{
     margin-bottom: 3rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
     color: var(--dark-cornflower-blue);
     h3{
         font-family: 'DM Serif Display', serif ;
@@ -32,4 +32,9 @@ small{
 }
 .progress-bar{
     background-color: var(--vivid-tangerine);
+}
+.alert{
+    margin-top: 2rem;
+    width:85%;
+    margin-inline: auto;
 }
