@@ -1,13 +1,16 @@
-<h5>
+<div [class]="tipoAlerta" role="alert">{{textoAlerta}}</div>
+<h5 class="">
     Registrar a un nuevo administrador
 </h5>
 <div class="container_form">
+    <p><strong>Aviso</strong>: el usuario que cree a partir de este formulario tendrá los mismos privilegios que esta cuenta. Use con precaución.</p>
     <form ngNoForm name="formulario">
-        <input type="text" name="nombreR" id="nombreR" placeholder="Nombre completo"/>
-        <input type="email" name="email" id="email" placeholder="Correo electrónico"/>
-        <input type="password" name="pass" id="pass" placeholder="Contraseña"/>
-        <input type="password" name="passConf" id="passConf" placeholder="Confirmar contraseña"/>
-        <!--<input type="submit" name="crearCuenta" value="Crear cuenta"/>-->
+        <input type="text" name="nombreR" id="nombreR" placeholder="Nombre completo" [(ngModel)]="nombre"/>
+        <input type="email" name="email" id="email" placeholder="Correo electrónico" [(ngModel)]="correo"/>
+        <input type="password" name="pass" id="pass" placeholder="Contraseña" [(ngModel)]="cont"/>
+        <input type="password" name="passConf" id="passConf" placeholder="Confirmar contraseña" [(ngModel)]="cont2"/>   
     </form>
-    <button  name="crearCuenta" value="Crear cuenta" (click)="registrarAdmin()">aa</button>
+    <div class="div-boton">
+        <button class="btn btn-primary" name="crearCuenta" value="Crear cuenta" (click)="registrarAdmin()">Crear cuenta</button>
+    </div>
 </div>

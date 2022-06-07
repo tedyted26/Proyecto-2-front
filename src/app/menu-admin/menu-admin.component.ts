@@ -7,15 +7,10 @@ import { TokenStorageService } from '../services/token-storage.service';
   styleUrls: ['./menu-admin.component.scss']
 })
 export class MenuAdminComponent implements OnInit {
-  currentUser: any;
-  token: any;
-  email: any;
-  name: any;
+
   
   ngOnInit(): void {
-    this.currentUser = localStorage.getItem('user_auth');
-    this.email = localStorage.getItem('email');
-    this.name = localStorage.getItem('name');
+    
   }
 
 

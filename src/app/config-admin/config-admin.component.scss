@@ -4,3 +4,35 @@ h5{
 .form-check{
     margin-block: 0.7rem;
 }
+.form-check-input:checked{
+    background-color: var(--maximum-blue-purple);
+    border-color: var(--maximum-blue-purple);
+}
+button{
+    width: 10rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+form{
+    margin-top: 1rem;
+}
+input[type=tel], input[type=email]{
+    width: 100%;
+    padding: 12px;
+    margin: 8px auto;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    color: var(--dark-cornflower-blue);
+    margin-bottom: 1rem;
+}
+input:focus{
+    outline-color: var(--dark-cornflower-blue);
+}
+.fila{
+    height: 100%;
+    display: flex;
+    align-content: space-between;
+}
