@@ -1,8 +1,9 @@
-<div class="container-reg">
+<div class="row container-reg">
     <div class="recuadro">
-        <h2 class="h1logreg">Login de administración</h2>
+        <h2 class="h1logreg">Login de administración</h2>    
         <div class="container_form">
             <form (ngSubmit)="submitForm()" [formGroup]="form" name="formulario">
+                <p class="error">{{textoError}}</p>
                 <input type="email" formControlName="email" name="email" id="email" placeholder="Correo electrónico"/>
                 <input type="password"  formControlName="password" name="pass" id="pass" placeholder="Contraseña"/>    
                 <button type="submit" class="btn btn-primary">Iniciar Sesión</button>    

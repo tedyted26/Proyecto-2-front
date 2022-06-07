@@ -1,30 +1,31 @@
 .container-reg{
-    background-color: var(--fondo);
-    height: 80vh;
+    background-image: url("https://images.pexels.com/photos/2850287/pexels-photo-2850287.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0% 75%;
+    height: 93vh;
+    margin-inline:0;
+    align-items: center;
+    justify-content: center;
 }
 
 .recuadro{
-    width: 50%;
-    text-align: center;
-    margin-inline: auto;
-    border: 1px solid var(--dark-cornflower-blue);
-    background-color: var(--maximum-blue-purple);
-    padding: 50px;
+    width: 40vw;
+    max-width: 500px;
+    text-align: center;  
+    border-radius: 15px;
+    border: 1px solid rgb(240, 240, 240);
+    background-color: rgba(240, 240, 240, 0.585);
+    overflow: hidden;
+    padding: 3rem;
 }
-
 .h1logreg{
     font-family: 'Oleo Script Swash Caps', cursive;
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--dark-cornflower-blue);
-    font-weight: 700;
+    margin-bottom: 3%;
     
-}
-.logologin{
-    width: 400px;
-    margin-top: 60px;
-    left: 50%;
-    width: 350px;
 }
 input[type=text], input[type=email], input[type=password]{
     width: 85%;
@@ -36,28 +37,17 @@ input[type=text], input[type=email], input[type=password]{
     box-sizing: border-box;
     font-size: 15px;
 }
-input[type=submit]{
-    width: 85%;
-    padding: 12px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-sizing: border-box;
-    background-color: var(--dark-cornflower-blue);
-    font-size: 17px;
-    font-weight: 300;
-    color: white;
-    &:hover{
-        background-color: rgb(67, 82, 141);
-    }
+button{
+    margin-top: 2vh;
 }
-.linkReg{
-    text-decoration: none;
-    color: var(--dark-cornflower-blue);
-    font-weight: 600;
-    &:hover{
-        
-        text-shadow: 1px 1px white;
-    }
+form{
+    padding-top: 2vh;
+    margin-inline:auto;
+    width: 80%;
+}
+input:focus{
+    outline-color: var(--dark-cornflower-blue);
+}
+.error{
+    color: var(--rojo-error);
 }
