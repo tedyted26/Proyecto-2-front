@@ -3,3 +3,7 @@ export interface Data {
         type_text: string;
       }
 
+export interface ExtraData {
+  informacion: string;
+}
+

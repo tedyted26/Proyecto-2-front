@@ -12,6 +12,7 @@ export class MenuAdminComponent implements OnInit {
   email: any;
   name: any;
   
+  
   ngOnInit(): void {
     this.currentUser = localStorage.getItem('user_auth');
     this.email = localStorage.getItem('email');
