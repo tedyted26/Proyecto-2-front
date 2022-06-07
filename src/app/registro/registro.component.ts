@@ -51,12 +51,12 @@ export class RegistroComponent implements OnInit {
             );
           */
           
-          this.textoAlerta = "Administrador creado con éxito";
+          this.textoAlerta = "Administrador creado con éxito.";
           this.tipoAlerta = this.alertaSuccess;
 
 
         }else{
-          this.textoAlerta = "Las contraseñas no coinciden";
+          this.textoAlerta = "Las contraseñas no coinciden.";
           this.tipoAlerta = this.alertaError;
         }
       }else{
@@ -64,7 +64,7 @@ export class RegistroComponent implements OnInit {
         this.tipoAlerta = this.alertaError;
       }
     }else{
-      this.textoAlerta = "Uno o más campos están sin rellenar.";
+      this.textoAlerta = "Uno o más campos están vacíos.";
       this.tipoAlerta = this.alertaError;
     }
   }
