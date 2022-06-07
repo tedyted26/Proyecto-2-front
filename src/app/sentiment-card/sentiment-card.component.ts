@@ -73,7 +73,7 @@ export class SentimentCardComponent implements OnInit {
 
       let change: SimpleChange = changes[propName];
       let curVal  = JSON.stringify(change["currentValue"]);
-      console.log(curVal)
+
       if (curVal){
         this.data_busqueda = JSON.parse( curVal);
         this.set_variables()
