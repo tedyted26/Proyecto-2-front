@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ExtraData } from '../data';
+import { UserData } from '../data';
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +14,14 @@ export class DataExtractionService {
   }
   
   getDataFromServer() {
-    return this.http.post("http://127.0.0.1:8000/api/me", {Texto:'Patata'})
-}
+    return this.http.post<UserData>("http://127.0.0.1:8000/api/me", {Texto:'Patata'})
+    
+  }
+
+  getGraphicsData(){
+    return this.http.post("http://127.0.0.1:8000/api/getGraphics", {Texto:'Patata'})
+  }
+
 
 
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TokenStorageService } from '../services/token-storage.service';
 import { DataExtractionService } from '../services/data-extraction.service';
 import { Data } from '@angular/router';
+import { UserData } from '../data';
 
 @Component({
   selector: 'app-menu-admin',
@@ -10,12 +11,20 @@ import { Data } from '@angular/router';
 })
 export class MenuAdminComponent implements OnInit {
 
-  
+  user_data: UserData;
+  provincias_data: any;
   constructor(private postData:DataExtractionService){
 
   }
   ngOnInit(): void {
-    this.postData.getDataFromServer().subscribe((result)=>console.warn("Resultado del Endpoint:" , result))
+    this.postData.getDataFromServer().subscribe(
+      (result: UserData)=>{
+        this.user_data = result;
+        console.warn("Resultado del Endpoint:" , result);
+        
+      
+      });
+
   }
 
 
