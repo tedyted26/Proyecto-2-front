@@ -8,13 +8,13 @@ import { ExtraData } from '../data';
 })
 export class DataExtractionService {
 
-  data_observable: Observable<ExtraData>;
+  //data_observable: Observable<ExtraData>;
 
   constructor(private http: HttpClient) {
   }
   
   getDataFromServer() {
-    return this.http.get("https://jsonplaceholder.typicode.com/posts")
+    return this.http.post("http://127.0.0.1:8000/api/me", {Texto:'Patata'})
 }
 
 
