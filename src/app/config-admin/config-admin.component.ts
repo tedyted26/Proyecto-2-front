@@ -1,5 +1,6 @@
 import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-config-admin',
@@ -13,7 +14,7 @@ export class ConfigAdminComponent implements OnInit {
   textoAlerta="";
   tipoAlerta="hidden";
 
-  constructor() { }
+  constructor(private api: ApiService) { }
   valorABC = true;
   valor20Min = true;
   valorElPais = true;
@@ -61,7 +62,9 @@ export class ConfigAdminComponent implements OnInit {
       else{
         if(this.correo.includes("@") && (this.correo.endsWith(".com") || this.correo.endsWith(".es")) && this.numeroTel.match(/^[0-9]+$/) != null){
         
-          //TODO guardar en la BBDD
+          this.api.modData(this.correo, this.numeroTel).subscribe(
+            
+          );
           this.textoAlerta = "Configuración de contacto guardada correctamente.";
           this.tipoAlerta = this.alertaSuccess;
 

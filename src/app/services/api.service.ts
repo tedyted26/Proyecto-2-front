@@ -25,5 +25,14 @@ export class ApiService {
     return this.data_observable;
 
   }
+  modData(email: string, tlf: string) {
+    console.log("Va modificar los datos")
+    console.log(email)
+    console.log(tlf)
+    this.data_observable = this.http.post<Data>("http://127.0.0.1:8000/api/moddata",
+     {email: email, tlf: tlf});
+    return this.data_observable;
+
+  }
 
 }
